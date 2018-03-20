@@ -1023,7 +1023,7 @@
                             <tr>
                                 <td>Mode</td>
                                 <td>mode</td>
-                                <td><ul>
+                                <td data-placement="bottom" data-toggle="popover" data-content="<b>free</b>: All commands can be used.<br><b>lite</b>: All fun commands are disabled.<br><b>strict</b>: Only moderation commands can be used." data-trigger="hover" data-title="The meaning of the different arguments for the mode command"><ul>
                                     <li>free</li>
                                     <li>lite</li>
                                     <li>strict</li>
@@ -1141,4 +1141,7 @@
     if (window.location.hash) {$(".nav-tabs a[href=\"" + window.location.hash.replace("!", "") + "\"]").tab("show")}
     $(".nav-tabs a").on("shown.bs.tab", function(tab) {window.location.hash = tab.target.hash.replace("#", "#!")})
     $("td:empty").append("<i style=\"opacity: 0.5;\" class=\"fa fa-times\"></i>")
+    $(function () {
+  $('[data-toggle="popover"]').popover({html: true})
+})
 </script>
