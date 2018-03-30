@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/x/style.css">
+        <script src="https://use.fontawesome.com/d9402e3b49.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+        <title>Home – TypicalBot</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
+
+            <div class="collapse navbar-collapse mr-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/documentation">Documentation</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse ml-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/invite">Add TypicalBot</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/join-us">Join the Server</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content container">
+			<div class="container donate-div">
+				<img class="donate-img" src="/images/emblem.png" />
+				<h1 class="donate-h1">Donate to TypicalBot</h1>
+				<br><br>
+				<input type='range' name='donateAmount' min='1' max='200' value='5' step='1' oninput="sliderUpdate(this.value)">
+				<br>
+				<a class="donate-button" id="donate-btn"></a>
+				<br><br><br>
+				<p>Alternatives: <a class="btn btn-default btn-sm" href="/donate/patreon/">Patreon</a> or <a class="btn btn-default btn-sm" href="/donate/paypal.me/">PayPal.me</a>
+			</div>
+        </div>
+    </body>
+</html>
+
+<script>
+	var amount = 5
+	var donateButton = $('#donate-btn');
+	donateButton.html("Donate $" + amount)
+	function sliderUpdate(value) {
+	    donateButton.html("Donate $" + value);
+		amount = value
+	}
+	donateButton.click(function() {
+		window.location.href = "process.php?paypal=checkout&donateAmount=" + amount
+	})
+</script>
