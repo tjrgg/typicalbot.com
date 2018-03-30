@@ -1,64 +1,57 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/x/style.css">
-        <script src="https://use.fontawesome.com/d9402e3b49.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-        <title>Home – TypicalBot</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
 
-            <div class="collapse navbar-collapse mr-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/documentation">Documentation</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse ml-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/invite">Add TypicalBot</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/join-us">Join the Server</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
-                </ul>
-            </div>
-        </nav>
+<head>
+    <meta charset="utf-8">
+    <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/x/style.css">
+    <link rel="stylesheet" href="/donate/slider.css">
+    <script src="https://use.fontawesome.com/d9402e3b49.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="/donate/slider.js"></script>
+    <title>Home – TypicalBot</title>
+</head>
 
-        <div class="content container">
-			<div class="container donate-div">
-				<img class="donate-img" src="/images/emblem.png" />
-				<h1 class="donate-h1">Donate to TypicalBot</h1>
-				<br><br>
-				<input type='range' name='donateAmount' min='1' max='200' value='5' step='1' oninput="sliderUpdate(this.value)">
-				<br>
-				<a class="donate-button" id="donate-btn"></a>
-				<br><br><br>
-				<p>Alternatives: <a class="btn btn-default btn-sm" href="/donate/patreon/">Patreon</a> or <a class="btn btn-default btn-sm" href="/donate/paypal.me/">PayPal.me</a>
-			</div>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
+
+        <div class="collapse navbar-collapse mr-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/documentation">Documentation</a>
+                </li>
+            </ul>
         </div>
-    </body>
-</html>
+        <div class="collapse navbar-collapse ml-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/invite">Add TypicalBot</a></li>
+                <li class="nav-item"><a class="nav-link" href="/join-us">Join the Server</a></li>
+                <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<script>
-	var amount = 5
-	var donateButton = $('#donate-btn');
-	donateButton.html("Donate $" + amount)
-	function sliderUpdate(value) {
-	    donateButton.html("Donate $" + value);
-		amount = value
-	}
-	donateButton.click(function() {
-		window.location.href = "process.php?paypal=checkout&donateAmount=" + amount
-	})
-</script>
+    <div class="content container">
+        <div class="container text-center">
+            <h1 class="donate-h1">Donate to TypicalBot</h1>
+            <div id="slider-div">
+                <input id="slider" name="donateAmount" min="1" value="5" step="1" max="50" oninput="sliderUpdate(this.value)" type="range">
+            </div>
+            <a onclick="donate()" id="donate-btn" class="btn btn-blue btn-lg">Donate $5</a>
+            <div>
+                <h5>Or donate using one of these methods:</h5><a href="/donate/patreon/" class="btn btn-blue btn-sm"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Patreon_logo.svg" width="17px"> Patreon</a><a href="/donate/paypal.me/" class="btn btn-blue btn-sm">
+    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/PayPal_Logo_Icon_2014.svg" width="17px">
+    PayPal.me</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
