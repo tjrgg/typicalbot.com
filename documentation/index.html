@@ -251,7 +251,6 @@
 
             <!-- TABLE:IMAGES -->
 
-
             <div class="tab-pane fade in" id="images">
                 <table class="table table-striped table-hover">
                     <thead>
@@ -790,11 +789,11 @@
                                 <ul>
                                     <li>$strawpoll
                                         <code id="input">&lt;question&gt;</code> |
-                                        <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code>
+                                        <code id="input">&lt;choice1; choice2; choice3; ...&gt;</code>
                                     </li>
                                     <li>$strawpoll -m
                                         <code id="input">&lt;question&gt;</code> |
-                                        <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code>
+                                        <code id="input">&lt;choice1; choice2; choice3; ...&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1109,31 +1108,38 @@
                     <thead>
                         <tr>
                             <tr>
-                                <td class="tab-note" colspan=4>Use the <code id="input">settings</code> command found under the moderation tab to change these settings.</td>
+                                <td class="tab-note" colspan=4>Use the
+                                    <code id="input">settings</code> command found under the moderation tab to change these settings.</td>
                             </tr>
                             <th width="10%">Name</th>
                             <th width="10%">Setting</th>
+                            <th width="20%">Description</th>
                             <th width="30%">Values</th>
-                            <th width="35%">Description</th>
-                            <th width="5%">Modifiers</th>
+                            <th width="30%">Examples</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Embed</td>
                             <td>embed</td>
+                            <td>Embed responses from TypicalBot.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>enable</li>
                                 </ul>
                             </td>
-                            <td>Embed responses from TypicalBot.</td>
-                            <td></td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit embed disable</li>
+                                    <li>$settings edit embed enable</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>Administrator Role</td>
                             <td>adminrole</td>
+                            <td>Administrator role that will grant users with the role(s) permission level 3.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1149,12 +1155,12 @@
                                     <li>clear</li>
                                 </ul>
                             </td>
-                            <td>Administrator role that will grant users with the role(s) permission level 3.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Moderator Role</td>
                             <td>modrole</td>
+                            <td>Moderator role that will grant users with the role(s) permission level 2.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1170,12 +1176,12 @@
                                     <li>clear</li>
                                 </ul>
                             </td>
-                            <td>Moderator role that will grant users with the role(s) permission level 2.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>DJ Role</td>
                             <td>djrole</td>
+                            <td>DJ role that will grant users with the role(s) permission level 1.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1191,12 +1197,12 @@
                                     <li>clear</li>
                                 </ul>
                             </td>
-                            <td>DJ role that will grant users with the role(s) permission level 1.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Blacklist Role</td>
                             <td>blacklistrole</td>
+                            <td>Blacklist role that will deny users with the role(s) access to any TypicalBot commands.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1212,12 +1218,12 @@
                                     <li>clear</li>
                                 </ul>
                             </td>
-                            <td>Blacklist role that will deny users with the role(s) access to any TypicalBot commands.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Automatic Role</td>
                             <td>autorole</td>
+                            <td>A role that users will gain upon joining the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1226,12 +1232,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A role that users will gain upon joining the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Automatic Role Delay</td>
                             <td>autoroledelay</td>
+                            <td>The amount of time to wait before giving the auto role.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1241,24 +1247,26 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>The amount of time to wait before giving the auto role.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Automatic Role Silent</td>
                             <td>autorolesilent</td>
+                            <td>If not silent, a message will be sent in the logs channel stating a user was given the autorole.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>enable</li>
                                 </ul>
                             </td>
-                            <td>If not silent, a message will be sent in the logs channel stating a user was given the autorole.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Subscriber Role</td>
                             <td>subscriberrole</td>
+                            <td>A role that will be given when a user uses the
+                                <code id="input">subscribe</code> command.
+                            </td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1267,13 +1275,14 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A role that will be given when a user uses the
-                                <code id="input">subscribe</code> command.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Announcements Channel</td>
                             <td>announcements</td>
+                            <td>A channel for announcements to be posted, used with the
+                                <code id="input">announce</code> command.
+                            </td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1283,13 +1292,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A channel for announcements to be posted, used with the
-                                <code id="input">announce</code> command.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Announcements Mention</td>
                             <td>announcements-mention</td>
+                            <td>A mention to be put in the announcement when posted, such as a Subscriber role.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1298,12 +1306,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A mention to be put in the announcement when posted, such as a Subscriber role.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Logs Channel</td>
                             <td>logs</td>
+                            <td>A channel for activity logs to be posted.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1313,12 +1321,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A channel for activity logs to be posted.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>User Join Logs</td>
                             <td>logs-join</td>
+                            <td>A custom set message to be posted when a user joins the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1330,12 +1338,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A custom set message to be posted when a user joins the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>User Leave Logs</td>
                             <td>logs-leave</td>
+                            <td>A custom set message to be posted when a user leaves the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1347,12 +1355,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A custom set message to be posted when a user leaves the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>User Ban Logs</td>
                             <td>logs-ban</td>
+                            <td>A custom set message to be posted when a user is banned from the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1364,12 +1372,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A custom set message to be posted when a user is banned from the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>User Unban Logs</td>
                             <td>logs-unban</td>
+                            <td>A custom set message to be posted when a user is unbanned from the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1381,12 +1389,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A custom set message to be posted when a user is unbanned from the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>User Nickname Logs</td>
                             <td>logs-nickname</td>
+                            <td>A custom set message to be posted when a user changes their nickname in the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1397,12 +1405,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A custom set message to be posted when a user changes their nickname in the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>User Invite Logs</td>
                             <td>logs-invite</td>
+                            <td>A custom set message to be posted when a user posts an invite in the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1413,12 +1421,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A custom set message to be posted when a user posts an invite in the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Moderation Logs Channel</td>
                             <td>modlogs</td>
+                            <td>A channel to send moderation logs in. Aka audit logs.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1428,24 +1436,24 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A channel to send moderation logs in. Aka audit logs.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Message Purge Moderation Logs</td>
                             <td>modlogs-purge</td>
+                            <td>A modlog to log when a moderator or administrator purges messages in a channel.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>enable</li>
                                 </ul>
                             </td>
-                            <td>A modlog to log when a moderator or administrator purges messages in a channel.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Automatic Message</td>
                             <td>automessage</td>
+                            <td>A message to be sent to a user when they join the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1454,12 +1462,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A message to be sent to a user when they join the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Automatic Nickname</td>
                             <td>autonickname</td>
+                            <td>A nickname to give a user when they join the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1468,12 +1476,12 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A nickname to give a user when they join the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Mode</td>
                             <td>mode</td>
+                            <td>A mode to enable/disable a list of commands.</td>
                             <td data-placement="bottom" data-toggle="popover" data-content="<b>free</b>: All commands can be used.<br><b>lite</b>: All fun commands are disabled.<br><b>strict</b>: Only moderation commands can be used."
                                 data-trigger="hover" data-title="Mode Restrictions">
                                 <ul>
@@ -1482,12 +1490,14 @@
                                     <li>strict</li>
                                 </ul>
                             </td>
-                            <td>A mode to enable/disable a list of commands.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Custom Prefix</td>
                             <td>customprefix</td>
+                            <td>A custom prefix to use other than
+                                <code id="input">$</code>.
+                            </td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1496,38 +1506,37 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>A custom prefix to use other than
-                                <code id="input">$</code>.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Default Prefix</td>
                             <td>defaultprefix</td>
+                            <td>The default prefix
+                                <code id="input">$</code>.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>enable</li>
                                 </ul>
                             </td>
-                            <td>The default prefix
-                                <code id="input">$</code>.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Anti-Invite</td>
                             <td>antiinvite</td>
+                            <td>Server moderation tool to delete any invites sent by users in the server.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>enable</li>
                                 </ul>
                             </td>
-                            <td>Server moderation tool to delete any invites sent by users in the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Anti-Invite Warn</td>
                             <td>antiinvite-warn</td>
+                            <td>Server moderation tool to warn users that post invites in the server.</td>
                             <td>
                                 <ul>
                                     <li>disable|0</li>
@@ -1536,12 +1545,15 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>Server moderation tool to warn users that post invites in the server.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Anti-Invite Kick</td>
                             <td>antiinvite-kick</td>
+                            <td>Server moderation tool to kick users that post invites in the server. Note that this cannot be
+                                less than the
+                                <code id="input">antiinvite-warn</code> setting.
+                            </td>
                             <td>
                                 <ul>
                                     <li>disable|0</li>
@@ -1550,22 +1562,19 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>Server moderation tool to kick users that post invites in the server. Note that this cannot be
-                                less than the
-                                <code id="input">antiinvite-warn</code> setting.</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Disable Nickname Command</td>
                             <td>nonickname</td>
+                            <td>A way to disable the
+                                <code id="input">nickname</code> command from being used.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>enable</li>
                                 </ul>
                             </td>
-                            <td>A way to disable the
-                                <code id="input">nickname</code> command from being used.</td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -1617,9 +1626,9 @@
 
 <script type="text/javascript">
     if (window.location.hash) { $(".nav-tabs a[href=\"" + window.location.hash.replace("!", "") + "\"]").tab("show") }
-    $(".nav-tabs a").on("shown.bs.tab", function (tab) { window.location.hash = tab.target.hash.replace("#", "#!") })
+    $(".nav-tabs a").on("shown.bs.tab", function(tab) { window.location.hash = tab.target.hash.replace("#", "#!") })
     $("td:empty").append("<i style=\"opacity: 0.5;\" class=\"fa fa-times\"></i>")
-    $(function () {
+    $(function() {
         $('[data-toggle="popover"]').popover({ html: true })
     })
 </script>
