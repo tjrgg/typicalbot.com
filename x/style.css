@@ -90,3 +90,12 @@ code[id="input"] {
 .docs .fa-asterisk {
     color: red;
 }
+.navbar-toggler-icon{
+    background-image: url("/x/toggler.svg");
+}
+.navbar-toggler {
+    border-color: white ;
+}
+.nav-item {
+        color: white !important
+}
