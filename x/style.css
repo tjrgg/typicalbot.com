@@ -61,19 +61,23 @@ nav ul .dropdown-menu .dropdown-item {
 
 .docs {
     border-radius: .3rem;
-    max-width: 100%;
-    width: auto;
     padding: 10px;
-    margin-left: 200px;
-    margin-right: 200px;
     background-color: white;
+    max-width: 80%;
 }
+
 span[id="right"] li {
     display: inline-block;
 }
-code[id="input"] {
+code[class="input"] {
     color: #00adff;
     font-style: italic;
+}
+code[class="mention"] {
+    background: #f1f3fb;
+    background-color: rgba(115, 139, 215, 0.1);
+    color: #7289da;
+    font-family: Whitney, Helvetica Neue, Helvetica,Arial, sans-serif;
 }
 .docs .nav-link {
     color: #00adff;

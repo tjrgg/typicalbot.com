@@ -10,6 +10,7 @@
     <meta property="og:description" content="Built upon over a year of experience, TypicalBot is the ironically-named bot that is far from typical.">
     <meta property="og:site_name" content="TypicalBot">
     <meta property="og:image" content="https://typicalbot.com/x/images/icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5">
     <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/x/style.css">
@@ -22,9 +23,11 @@
 
 <body>
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="/">
+            <img src="/x/images/icon.png" class="align-top">TypicalBot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="content">
             <ul class="navbar-nav mr-auto">
@@ -36,20 +39,29 @@
                 </li>
             </ul>
             <ul class="navbar-nav my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="/invite">Add TypicalBot</a></li>
-                <li class="nav-item"><a class="nav-link" href="/join-us">Join the Server</a></li>
-                <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/invite">Add TypicalBot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/join-us">Join the Server</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/donate">Donate</a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <div class="content container docs">
+    <div class="content container-fluid docs">
         <h2 style="text-align: center;" id="ignoretheme">TypicalBot Documentation</h2>
         <hr class="my-2">
         <br>
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a data-toggle="tab" class="nav-link active" href="#fun">Fun</a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="tab" class="nav-link" href="#music">Music</a>
             </li>
             <li class="nav-item">
                 <a data-toggle="tab" class="nav-link" href="#images">Images</a>
@@ -80,43 +92,58 @@
             <!-- TABLE:FUN -->
 
             <div class="tab-pane show active fade in" id="fun">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th width="10%">Name</th>
+                            <th width="20%">Description</th>
                             <th width="10%">Aliases</th>
-                            <th width="30%">Usage</th>
-                            <th width="50%">Description</th>
+                            <th width="20%">Usage</th>
+                            <th width="40%">Examples</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>8ball</td>
+                            <td>Ask the magic 8ball a question.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$8ball
-                                        <code id="input">&lt;question&gt;</code>
+                                        <code class="input">&lt;question&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>Ask the magic 8ball a question.</td>
+                            <td>
+                                <ul>
+                                    <li>$8ball Am I an awesome human being?</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>cookie</td>
+                            <td>Give another user a cookie or keep them all for yourself.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$cookie</li>
                                     <li>$cookie
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>Give another user a cookie or keep them all for yourself.</td>
+                            <td>
+                                <ul>
+                                    <li>$cookie</li>
+                                    <li>$cookie
+                                        <code class="mention">@HyperCoder</code>
+                                    </li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>dice</td>
+                            <td>Roll a n-sided die.</td>
                             <td>
                                 <ul>
                                     <li>die</li>
@@ -126,106 +153,168 @@
                                 <ul>
                                     <li>$dice</li>
                                     <li>$dice
-                                        <code id="input">&lt;number-of-sides&gt;</code>
+                                        <code class="input">&lt;number-of-sides&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>Roll a n-sided die.</td>
+                            <td>
+                                <ul>
+                                    <li>$dice</li>
+                                    <li>$dice 100</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>hug</td>
+                            <td>'Hug' another user in the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$hug
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>'Hug' another user in the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$hug</li>
+                                    <li>$hug
+                                        <code class="mention">@HyperCoder</code>
+                                    </li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>joke</td>
+                            <td>Gives you a random joke.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$joke</li>
                                 </ul>
                             </td>
-                            <td>Gives you a random joke.</td>
+                            <td>
+                                <ul>
+                                    <li>$hug</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>punch</td>
+                            <td>'Punch' another user in the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$punch
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>'Punch' another user in the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$punch</li>
+                                    <li>$punch
+                                        <code class="mention">@Packer</code>
+                                    </li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>quote</td>
+                            <td>Gives you a random quote.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$quote</li>
                                 </ul>
                             </td>
-                            <td>Gives you a random quote.</td>
+                            <td>
+                                <ul>
+                                    <li>$quote</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>shoot</td>
+                            <td>'Shoot' another user in the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$shoot
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>'Shoot' another user in the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$shoot</li>
+                                    <li>$shoot
+                                        <code class="mention">@Packer</code>
+                                    </li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>slap</td>
+                            <td>'Slap' another user in the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$slap
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>'Slap' another user in the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$slap</li>
+                                    <li>$slap
+                                        <code class="mention">@Xenotater</code>
+                                    </li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>stab</td>
+                            <td>'Stab' another user in the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$stab
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>'Stab' another user in the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$stab</li>
+                                    <li>$stab
+                                        <code class="mention">@Xenotater</code>
+                                    </li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>urban</td>
+                            <td>Grabs the definition from Urban Dictionary for the specified word.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$urban
-                                        <code id="input">&lt;query&gt;</code>
+                                        <code class="input">&lt;query&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>Grabs the definition from Urban Dictionary for the specified word.</td>
+                            <td>
+                                <ul>
+                                    <li>$urban</li>
+                                    <li>$urban pineapple</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>yomama</td>
+                            <td>Gives you a random yomama joke.</td>
                             <td>
                                 <ul>
                                     <li>yomomma</li>
@@ -236,7 +325,40 @@
                                     <li>$yomama</li>
                                 </ul>
                             </td>
-                            <td>Gives you a random yomama joke.</td>
+                            <td>
+                                <ul>
+                                    <li>$yomomma</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE:MUSIC -->
+
+            <div class="tab-pane fade in" id="music">
+                <table class="table table-striped table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th width="10%">Name</th>
+                            <th width="20%">Description</th>
+                            <th width="10%">Aliases</th>
+                            <th width="20%">Usage</th>
+                            <th width="40%">Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>play</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <ul>
+                                    <li>$play</li>
+                                </ul>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -245,18 +367,20 @@
             <!-- TABLE:IMAGES -->
 
             <div class="tab-pane fade in" id="images">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th width="10%">Name</th>
+                            <th width="20%">Description</th>
                             <th width="10%">Aliases</th>
-                            <th width="30%">Usage</th>
-                            <th width="50%">Description</th>
+                            <th width="20%">Usage</th>
+                            <th width="40%">Examples</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>bunny</td>
+                            <td>Gives you a random bunny picture.</td>
                             <td>
                                 <ul>
                                     <li>rabbit</li>
@@ -267,10 +391,15 @@
                                     <li>$bunny</li>
                                 </ul>
                             </td>
-                            <td>Gives you a random bunny picture.</td>
+                            <td>
+                                <ul>
+                                    <li>$bunny</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>cat</td>
+                            <td>Gives you a random cat picture.</td>
                             <td>
                                 <ul>
                                     <li>kitty</li>
@@ -282,10 +411,15 @@
                                     <li>$cat</li>
                                 </ul>
                             </td>
-                            <td>Gives you a random cat picture.</td>
+                            <td>
+                                <ul>
+                                    <li>$cat</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>dog</td>
+                            <td>Gives you a random dog picture.</td>
                             <td>
                                 <ul>
                                     <li>puppy</li>
@@ -297,17 +431,26 @@
                                     <li>$dog</li>
                                 </ul>
                             </td>
-                            <td>Gives you a random dog picture.</td>
+                            <td>
+                                <ul>
+                                    <li>$dog</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>tiger</td>
+                            <td>Gives you a random tiger picture.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$tiger</li>
                                 </ul>
                             </td>
-                            <td>Gives you a random tiger picture.</td>
+                            <td>
+                                <ul>
+                                    <li>$tiger</li>
+                                </ul>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -316,77 +459,125 @@
             <!-- TABLE:MODERATION -->
 
             <div class="tab-pane fade in" id="moderation">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <td class="tab-note" colspan=4>Usage examples with
-                                <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i> show elevated permissions are required.</td>
+                                <span class="badge badge-danger">#</span> show the permission level required to execute the sub-command.</td>
                         </tr>
                         <tr>
                             <th width="10%">Name</th>
-                            <th width="10%">Aliases</th>
-                            <th width="30%">Usage</th>
                             <th width="10%">Permission</th>
-                            <th width="40%">Description</th>
+                            <th width="20%">Description</th>
+                            <th width="10%">Aliases</th>
+                            <th width="20%">Usage</th>
+                            <th width="30%">Examples</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>adcheck</td>
+                            <td>2</td>
+                            <td>Check if any members of a server have a server invite in their playing status.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$adcheck</li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Check if any members of a server have a server invite in their playing status.</td>
+                            <td>
+                                <ul>
+                                    <li>$adcheck</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>announce</td>
+                            <td>3</td>
+                            <td>Send an announcement to the announcements channel. Use the flag '-e' before your content to make
+                                the message an embed. If the announcements mention role is set, it will always use it.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$announce
-                                        <code id="input">&lt;content&gt;</code>
+                                        <code class="input">&lt;content&gt;</code>
                                     </li>
                                     <li>$announce -e
-                                        <code id="input">&lt;content&gt;</code>
+                                        <code class="input">&lt;content&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>3</td>
-                            <td>Send an announcement to the announcements channel. Use the flag '-e' before your content to make
-                                the message an embed. If the announcements mention role is set, it will always use it.</td>
+                            <td>
+                                <ul>
+                                    <li>$announce Hey everyone! We have some updates!</li>
+                                    <li>$announce -e Hey everyone! We have some updates! [This is an embed!]</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>ban</td>
+                            <td>2</td>
+                            <td>Ban a member from the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$ban
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                     <li>$ban
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;days-to-purge&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;days-to-purge&gt;</code>
                                     </li>
                                     <li>$ban
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                     <li>$ban
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;days-to-purge&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;days-to-purge&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
+                                    </li>
+                                    <li>$ban
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;ban-duration&gt;</code>
+                                    </li>
+                                    <li>$ban
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;ban-duration&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
+                                    </li>
+                                    <li>$ban
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;ban-duration&gt;</code>
+                                        <code class="input">&lt;days-to-purge&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Ban a member from the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$ban
+                                        <code class="mention">@Xenotater</code>
+                                    </li>
+                                    <li>$ban
+                                        <code class="mention">@Xenotater</code> 2</li>
+                                    <li>$ban
+                                        <code class="mention">@Xenotater</code> Shamelessly promoting his YouTube channel.</li>
+                                    <li>$ban
+                                        <code class="mention">@Xenotater</code> 3 Shamelessly promoting his YouTube channel.</li>
+                                    <li>$ban
+                                        <code class="mention">@Xenotater</code> 2h 2m 5s</li>
+                                    <li>$ban
+                                        <code class="mention">@Xenotater</code> 3d Shamelessly promoting his YouTube channel.</li>
+                                    <li>$ban
+                                        <code class="mention">@Xenotater</code> 2h 1s 2 Shamelessly promoting his YouTube channel.</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>ignore</td>
+                            <td>2</td>
+                            <td>Makes the bot ignore commands or invites in a channel.</td>
                             <td></td>
                             <td>
                                 <ul>
@@ -394,28 +585,43 @@
                                     <li>$ignore invites</li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Makes the bot ignore commands or invites in a channel.</td>
+                            <td>
+                                <ul>
+                                    <li>$ignore commands</li>
+                                    <li>$ignore invites</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>kick</td>
+                            <td>2</td>
+                            <td>Kick a member from the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$kick
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                     <li>$kick
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Kick a member from the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$kick
+                                        <code class="mention">@Xenotater</code>
+                                    </li>
+                                    <li>$kick
+                                        <code class="mention">@Xenotater</code> Shamelessly promoting his YouTube channel.</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>purge</td>
+                            <td>2</td>
+                            <td>Purge messages in a channel.</td>
                             <td>
                                 <ul>
                                     <li>prune</li>
@@ -424,53 +630,92 @@
                             <td>
                                 <ul>
                                     <li>$purge
-                                        <code id="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
                                     </li>
                                     <li>$purge
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                     <li>$purge
-                                        <code id="input">&lt;#channel&gt;</code>
-                                        <code id="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                     <li>$purge
-                                        <code id="input">&lt;@role&gt;</code>
-                                        <code id="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;#channel-mention&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
+                                    </li>
+                                    <li>$purge
+                                        <code class="input">&lt;@role-mention&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                     <li>$purge me
-                                        <code id="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
                                     </li>
                                     <li>$purge you
-                                        <code id="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
                                     </li>
                                     <li>$purge bots
-                                        <code id="input">&lt;message-count&gt;</code>
+                                        <code class="input">&lt;message-count&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Purge messages in a channel.</td>
+                            <td>
+                                <ul>
+                                    <li>$purge 50</li>
+                                    <li>$purge
+                                        <code class="mention">@Xenotater</code> 22</li>
+                                    <li>$purge
+                                        <code class="mention">@Xenotater</code> 27 Shamelessly promoting his YouTube channel.</li>
+                                    <li>$purge
+                                        <code class="mention">#lounge</code> 2</li>
+                                    <li>$purge
+                                        <code class="mention">#lounge</code> 3 Shamelessly promoting his YouTube channel.</li>
+                                    <li>$purge
+                                        <code class="mention">@Administrators</code> 3</li>
+                                    <li>$purge
+                                        <code class="mention">@Administrators</code> 83 Shamelessly promoting his YouTube channel.</li>
+                                    <li>$purge me 8</li>
+                                    <li>$purge me 8 Spam!</li>
+                                    <li>$purge you 82</li>
+                                    <li>$purge you 82 Bot is sending so many responses.</li>
+                                    <li>$purge bots 88</li>
+                                    <li>$purge bots 88 Too many bot messages!</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>reason</td>
+                            <td>2</td>
+                            <td>Change or set a reason for a case in moderation logs.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$reason latest
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                     <li>$command
-                                        <code id="input">&lt;case-id&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;case-id&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Change or set a reason for a case in moderation logs.</td>
+                            <td>
+                                <ul>
+                                    <li>$purge latest Because I said so!</li>
+                                    <li>$purge 2 Because I said so!</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>roles</td>
+                            <td>0</td>
+                            <td>Manage or list the server's roles or public roles.
+                                <br>
+                                <span style="color: red; font-size: 14px; font-style: italic;">* IDs, mentions, and names can be used for all usages.</span>
+                            </td>
                             <td>
                                 <ul>
                                     <li>role</li>
@@ -481,40 +726,69 @@
                                     <li>$roles help</li>
                                     <li>$roles list</li>
                                     <li>$roles info[rmation]
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>$roles info[rmation] members
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>$roles give
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
-                                        <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i>
+                                        <code class="input">&lt;user-tag|user-id|user-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <span data-toggle="modal" data-target="#permission-3" class="badge badge-danger">3</span>
                                     </li>
                                     <li>$roles take
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
-                                        <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i>
+                                        <code class="input">&lt;user-tag|user-id|user-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <span data-toggle="modal" data-target="#permission-3" class="badge badge-danger">3</span>
                                     </li>
                                     <li>$roles public list</li>
                                     <li>$roles public add
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
-                                        <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <span data-toggle="modal" data-target="#permission-3" class="badge badge-danger">3</span>
                                     </li>
                                     <li>$roles public remove
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
-                                        <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <span data-toggle="modal" data-target="#permission-3" class="badge badge-danger">3</span>
                                     </li>
                                     <li>$roles public clear
-                                        <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i>
+                                        <span data-toggle="modal" data-target="#permission-3" class="badge badge-danger">3</span>
                                     </li>
                                 </ul>
                             </td>
-                            <td>0</td>
-                            <td>Manage or list the server's roles or public roles.</td>
+                            <td>
+                                <ul>
+                                    <li>$roles help</li>
+                                    <li>$roles list</li>
+                                    <li>$roles info Administrator</li>
+                                    <li>$roles info
+                                        <code class="mention">@Administrators</code>
+                                    </li>
+                                    <li>$roles info 353618292067401728</li>
+                                    <li>$roles info members Administrator</li>
+                                    <li>$roles give
+                                        <code class="mention">@Xenotater</code> Administrators</li>
+                                    <li>$roles give Xenotater#0303
+                                        <code class="mention">@Administrators</code>
+                                    </li>
+                                    <li>$roles give
+                                        <code class="mention">@Xenotater</code> 353618292067401728</li>
+                                    <li>$roles take
+                                        <code class="mention">@Xenotater</code> Administrators</li>
+                                    <li>$roles public list</li>
+                                    <li>$roles public add Administrator</li>
+                                    <li>$roles public add
+                                        <code class="mention">@Administrators</code>
+                                    </li>
+                                    <li>$roles public add 353618292067401728</li>
+                                    <li>$roles public remove Administrator</li>
+                                    <li>$roles public clear</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>say</td>
+                            <td>2</td>
+                            <td>Makes the bot send a message with the content used.</td>
                             <td>
                                 <ul>
                                     <li>speak</li>
@@ -523,19 +797,26 @@
                             <td>
                                 <ul>
                                     <li>$say
-                                        <code id="input">&lt;content&gt;</code>
+                                        <code class="input">&lt;content&gt;</code>
                                     </li>
                                     <li>$say
-                                        <code id="input">&lt;#channel&gt;</code>
-                                        <code id="input">&lt;content&gt;</code>
+                                        <code class="input">&lt;#channel&gt;</code>
+                                        <code class="input">&lt;content&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Makes the bot send a message with the content used.</td>
+                            <td>
+                                <ul>
+                                    <li>$say Help me!</li>
+                                    <li>$say
+                                        <code class="mention">&lt;#general&gt;</code> Help me!</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>settings</td>
+                            <td>0</td>
+                            <td>View or customize your server's settings and enable/disable specific features.</td>
                             <td>
                                 <ul>
                                     <li>set</li>
@@ -545,66 +826,98 @@
                                 <ul>
                                     <li>$settings list</li>
                                     <li>$settings list
-                                        <code id="input">&lt;page-number&gt;</code>
+                                        <code class="input">&lt;page-number&gt;</code>
                                     </li>
                                     <li>$settings view
-                                        <code id="input">&lt;setting&gt;</code>
+                                        <code class="input">&lt;setting&gt;</code>
                                     </li>
                                     <li>$settings edit
-                                        <code id="input">&lt;setting&gt;</code>
-                                        <code id="input">&lt;value&gt;</code>
-                                        <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i>
+                                        <code class="input">&lt;setting&gt;</code>
+                                        <code class="input">&lt;value&gt;</code>
+                                        <span data-toggle="modal" data-target="#permission-3" class="badge badge-danger">3</span>
                                     </li>
+                                    <li>$settings clear</li>
                                 </ul>
                             </td>
-                            <td>0</td>
-                            <td>View or customize your server's settings and enable/disable specific features.</td>
+                            <td>
+                                <ul>
+                                    <li>$settings list</li>
+                                    <li>$settings list 2</li>
+                                    <li>$settings view logs-nickname</li>
+                                    <li>$settings edit announcements
+                                        <code class="mention">&lt;#announcements&gt;</code>
+                                    </li>
+                                    <li>$settings edit logs-join **{user.tag}** has joined us! Yay!</li>
+                                    <li>$settings clear</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>softban</td>
+                            <td>2</td>
+                            <td>Bans and unbans a member from the server, essentially kicking them and clearing their messages.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$softban
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                     <li>$softban
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;days-to-purge&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;days-to-purge&gt;</code>
                                     </li>
                                     <li>$softban
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                     <li>$softban
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;days-to-purge&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;days-to-purge&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Bans and unbans a member from the server, essentially kicking them and clearing their messages.</td>
+                            <td>
+                                <ul>
+                                    <li>$softban
+                                        <code class="mention">@Xenotater</code>
+                                    </li>
+                                    <li>$softban
+                                        <code class="mention">@Xenotater</code> 2</li>
+                                    <li>$softban
+                                        <code class="mention">@Xenotater</code> Shamelessly promoting his YouTube channel.</li>
+                                    <li>$softban
+                                        <code class="mention">@Xenotater</code> 2 Shamelessly promoting his YouTube channel.</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>unban</td>
+                            <td>2</td>
+                            <td>Unban a user from the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$unban
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-id&gt;</code>
                                     </li>
                                     <li>$unban
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;user-id&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Unban a user from the server.</td>
+                            <td>
+                                <ul>
+                                    <li>$unban 187980183569956864</li>
+                                    <li>$unban 187980183569956864 Agreed to stop shamelessly promoting his YouTube channel.</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>unignore</td>
+                            <td>2</td>
+                            <td>Makes the bot unignore commands or invites in a channel.</td>
                             <td></td>
                             <td>
                                 <ul>
@@ -612,27 +925,35 @@
                                     <li>$unignore invites</li>
                                 </ul>
                             </td>
-                            <td>2</td>
-                            <td>Makes the bot unignore commands or invites in a channel.</td>
+                            <td>
+                                <ul>
+                                    <li>$unignore commands</li>
+                                    <li>$unignore invites</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>warn</td>
+                            <td>2</td>
+                            <td>Warn a member in the server.</td>
                             <td></td>
                             <td>
                                 <ul>
                                     <li>$warn
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                     </li>
                                     <li>$warn
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;reason&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;reason&gt;</code>
                                     </li>
                                 </ul>
                             </td>
-                            </ul>
+                            <td>
+                                <ul>
+                                    <li>$warn <code class="mention">@Xenotater</code></li>
+                                    <li>$warn <code class="mention">@Xenotater</code> Shamelessly promoting his YouTube channel.</li>
+                                </ul>
                             </td>
-                            <td>2</td>
-                            <td>Warn a member in the server.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -641,12 +962,12 @@
             <!-- TABLE:UTILITY -->
 
             <div class="tab-pane fade in" id="utility">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <tr>
                                 <td class="tab-note" colspan=4>Usage examples with
-                                    <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i> show elevated permissions are required.</td>
+                                    <span class="badge badge-danger">#</span> show the permission level required to execute the sub-command.</td>
                             </tr>
                             <th width="10%">Name</th>
                             <th width="10%">Aliases</th>
@@ -662,7 +983,7 @@
                                 <ul>
                                     <li>$bots</li>
                                     <li>$bots
-                                        <code id="input">&lt;page-number&gt;</code>
+                                        <code class="input">&lt;page-number&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -679,7 +1000,7 @@
                                 <ul>
                                     <li>$discriminator</li>
                                     <li>$discriminator
-                                        <code id="input">&lt;discriminator&gt;</code>
+                                        <code class="input">&lt;discriminator&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -692,7 +1013,7 @@
                                 <ul>
                                     <li>$hex random</li>
                                     <li>$hex
-                                        <code id="input">&lt;hex-code&gt;</code>
+                                        <code class="input">&lt;hex-code&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -720,19 +1041,19 @@
                                     <li>$nickname</li>
                                     <li>$nickname reset</li>
                                     <li>$nickname
-                                        <code id="input">&lt;desired-nickname&gt;</code>
+                                        <code class="input">&lt;desired-nickname&gt;</code>
                                     </li>
                                     <li>$nickname
-                                        <code id="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
                                         <i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i>
                                     </li>
                                     <li>$nickname
-                                        <code id="input">&lt;user-mention&gt;</code> reset
+                                        <code class="input">&lt;user-mention&gt;</code> reset
                                         <i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i>
                                     </li>
                                     <li>$nickname
-                                        <code id="input">&lt;user-mention&gt;</code>
-                                        <code id="input">&lt;desired-nickname&gt;</code>
+                                        <code class="input">&lt;user-mention&gt;</code>
+                                        <code class="input">&lt;desired-nickname&gt;</code>
                                         <i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i>
                                     </li>
                                 </ul>
@@ -755,11 +1076,11 @@
                             <td>
                                 <ul>
                                     <li>$search
-                                        <code id="input">&lt;query&gt;</code>
+                                        <code class="input">&lt;query&gt;</code>
                                     </li>
                                     <li>$search
-                                        <code id="input">&lt;query&gt;</code>
-                                        <code id="input">&lt;page-number&gt;</code>
+                                        <code class="input">&lt;query&gt;</code>
+                                        <code class="input">&lt;page-number&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -781,12 +1102,12 @@
                             <td>
                                 <ul>
                                     <li>$strawpoll
-                                        <code id="input">&lt;question&gt;</code> |
-                                        <code id="input">&lt;choice1; choice2; choice3; ...&gt;</code>
+                                        <code class="input">&lt;question&gt;</code> |
+                                        <code class="input">&lt;choice1; choice2; choice3; ...&gt;</code>
                                     </li>
                                     <li>$strawpoll -m
-                                        <code id="input">&lt;question&gt;</code> |
-                                        <code id="input">&lt;choice1; choice2; choice3; ...&gt;</code>
+                                        <code class="input">&lt;question&gt;</code> |
+                                        <code class="input">&lt;choice1; choice2; choice3; ...&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -819,7 +1140,7 @@
                                 <ul>
                                     <li>$userinfo</li>
                                     <li>$userinfo
-                                        <code id="input">&lt;user-mention|user-id|user-tag&gt;</code>
+                                        <code class="input">&lt;user-mention|user-id|user-tag&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -832,7 +1153,7 @@
             <!-- TABLE:TYPICALBOT -->
 
             <div class="tab-pane fade in" id="typicalbot">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th width="10%">Name</th>
@@ -887,7 +1208,7 @@
                                 <ul>
                                     <li>$help</li>
                                     <li>$help
-                                        <code id="input">&lt;command-name&gt;</code>
+                                        <code class="input">&lt;command-name&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -944,7 +1265,7 @@
                                 <ul>
                                     <li>$servers</li>
                                     <li>$servers
-                                        <code id="input">&lt;page-number&gt;</code>
+                                        <code class="input">&lt;page-number&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -967,7 +1288,7 @@
             <!-- TABLE:HELP -->
 
             <div class="tab-pane fade in" id="help">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th width="10%">Name</th>
@@ -1004,7 +1325,7 @@
             <!-- TABLE:PUBLIC-ROLES -->
 
             <div class="tab-pane fade in" id="public-roles">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <th width="10%">Name</th>
@@ -1017,12 +1338,12 @@
                         <tr>
                             <td>roles public add</td>
                             <td>Add a role to the public roles list users can use
-                                <code id="input">$give</code> or
-                                <code id="input">$take</code> with.</td>
+                                <code class="input">$give</code> or
+                                <code class="input">$take</code> with.</td>
                             <td>
                                 <ul>
                                     <li>$roles public add
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1031,12 +1352,12 @@
                         <tr>
                             <td>roles public remove</td>
                             <td>Remove a role from the public roles list users can use
-                                <code id="input">$give</code> or
-                                <code id="input">$take</code> with.</td>
+                                <code class="input">$give</code> or
+                                <code class="input">$take</code> with.</td>
                             <td>
                                 <ul>
                                     <li>$roles public remove
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1045,8 +1366,8 @@
                         <tr>
                             <td>roles public clear</td>
                             <td>Clear all roles from the public roles list users can use
-                                <code id="input">$give</code> or
-                                <code id="input">$take</code> with.</td>
+                                <code class="input">$give</code> or
+                                <code class="input">$take</code> with.</td>
                             <td>
                                 <ul>
                                     <li>$roles public clear</li>
@@ -1057,8 +1378,8 @@
                         <tr>
                             <td>roles public list</td>
                             <td>List all public roles list users can use
-                                <code id="input">$give</code> or
-                                <code id="input">$take</code> with.</td>
+                                <code class="input">$give</code> or
+                                <code class="input">$take</code> with.</td>
                             <td>
                                 <ul>
                                     <li>$roles public list</li>
@@ -1072,7 +1393,7 @@
                             <td>
                                 <ul>
                                     <li>$give
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1084,7 +1405,7 @@
                             <td>
                                 <ul>
                                     <li>$take
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1097,12 +1418,12 @@
             <!-- TABLE:SETTINGS -->
 
             <div class="tab-pane fade in" id="settings">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover table-responsive">
                     <thead>
                         <tr>
                             <tr>
                                 <td class="tab-note" colspan=4>Use the
-                                    <code id="input">settings</code> command found under the moderation tab to change these settings.</td>
+                                    <code class="input">settings</code> command found under the moderation tab to change these settings.</td>
                             </tr>
                             <th width="10%">Name</th>
                             <th width="10%">Setting</th>
@@ -1137,13 +1458,13 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>add
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>remove
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>clear</li>
                                 </ul>
@@ -1158,13 +1479,13 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>add
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>remove
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>clear</li>
                                 </ul>
@@ -1179,13 +1500,13 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>add
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>remove
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>clear</li>
                                 </ul>
@@ -1200,13 +1521,13 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>add
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>remove
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                     <li>clear</li>
                                 </ul>
@@ -1221,7 +1542,7 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1236,7 +1557,7 @@
                                     <li>disable</li>
                                     <li>default</li>
                                     <li>
-                                        <code id="input">&lt;time-in-milliseconds&gt;</code>
+                                        <code class="input">&lt;time-in-milliseconds&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1258,13 +1579,13 @@
                             <td>Subscriber Role</td>
                             <td>subscriberrole</td>
                             <td>A role that will be given when a user uses the
-                                <code id="input">subscribe</code> command.
+                                <code class="input">subscribe</code> command.
                             </td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1274,14 +1595,14 @@
                             <td>Announcements Channel</td>
                             <td>announcements</td>
                             <td>A channel for announcements to be posted, used with the
-                                <code id="input">announce</code> command.
+                                <code class="input">announce</code> command.
                             </td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>here</li>
                                     <li>
-                                        <code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code>
+                                        <code class="input">&lt;channel-name|channel-id|channel-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1295,7 +1616,7 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1310,7 +1631,7 @@
                                     <li>disable</li>
                                     <li>here</li>
                                     <li>
-                                        <code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code>
+                                        <code class="input">&lt;channel-name|channel-id|channel-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1327,7 +1648,7 @@
                                     <li>enable</li>
                                     <li>embed</li>
                                     <li>
-                                        <code id="input">&lt;custom-message&gt;</code>
+                                        <code class="input">&lt;custom-message&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1344,7 +1665,7 @@
                                     <li>enable</li>
                                     <li>embed</li>
                                     <li>
-                                        <code id="input">&lt;custom-message&gt;</code>
+                                        <code class="input">&lt;custom-message&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1361,7 +1682,7 @@
                                     <li>enable</li>
                                     <li>embed</li>
                                     <li>
-                                        <code id="input">&lt;custom-message&gt;</code>
+                                        <code class="input">&lt;custom-message&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1378,7 +1699,7 @@
                                     <li>enable</li>
                                     <li>embed</li>
                                     <li>
-                                        <code id="input">&lt;custom-message&gt;</code>
+                                        <code class="input">&lt;custom-message&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1394,7 +1715,7 @@
                                     <li>default</li>
                                     <li>enable</li>
                                     <li>
-                                        <code id="input">&lt;custom-message&gt;</code>
+                                        <code class="input">&lt;custom-message&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1410,7 +1731,7 @@
                                     <li>default</li>
                                     <li>enable</li>
                                     <li>
-                                        <code id="input">&lt;custom-message&gt;</code>
+                                        <code class="input">&lt;custom-message&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1425,7 +1746,7 @@
                                     <li>disable</li>
                                     <li>here</li>
                                     <li>
-                                        <code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code>
+                                        <code class="input">&lt;channel-name|channel-id|channel-mention&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1451,7 +1772,7 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;custom-message&gt;</code>
+                                        <code class="input">&lt;custom-message&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1465,7 +1786,7 @@
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;custom-nickname&gt;</code>
+                                        <code class="input">&lt;custom-nickname&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1489,13 +1810,13 @@
                             <td>Custom Prefix</td>
                             <td>customprefix</td>
                             <td>A custom prefix to use other than
-                                <code id="input">$</code>.
+                                <code class="input">$</code>.
                             </td>
                             <td>
                                 <ul>
                                     <li>disable</li>
                                     <li>
-                                        <code id="input">&lt;custom-prefix&gt;</code>
+                                        <code class="input">&lt;custom-prefix&gt;</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1505,7 +1826,7 @@
                             <td>Default Prefix</td>
                             <td>defaultprefix</td>
                             <td>The default prefix
-                                <code id="input">$</code>.</td>
+                                <code class="input">$</code>.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
@@ -1534,7 +1855,7 @@
                                 <ul>
                                     <li>disable|0</li>
                                     <li>
-                                        <code id="input">1-10</code>
+                                        <code class="input">1-10</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1545,13 +1866,13 @@
                             <td>antiinvite-kick</td>
                             <td>Server moderation tool to kick users that post invites in the server. Note that this cannot be
                                 less than the
-                                <code id="input">antiinvite-warn</code> setting.
+                                <code class="input">antiinvite-warn</code> setting.
                             </td>
                             <td>
                                 <ul>
                                     <li>disable|0</li>
                                     <li>
-                                        <code id="input">1-10</code>
+                                        <code class="input">1-10</code>
                                     </li>
                                 </ul>
                             </td>
@@ -1561,7 +1882,7 @@
                             <td>Disable Nickname Command</td>
                             <td>nonickname</td>
                             <td>A way to disable the
-                                <code id="input">nickname</code> command from being used.</td>
+                                <code class="input">nickname</code> command from being used.</td>
                             <td>
                                 <ul>
                                     <li>disable</li>
