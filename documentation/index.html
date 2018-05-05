@@ -25,8 +25,7 @@
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="/">
             <img src="/x/images/icon.png" class="align-top">TypicalBot</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="content">
@@ -351,12 +350,94 @@
                     <tbody>
                         <tr>
                             <td>play</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>Streams a song to a voice channel from YouTube.</td>
+                            <td><i style="opacity: 0.5;" class="fa fa-times"></i></td>
+                            <td>$play <code class="input">&lt;song name | Youtube url | Youtube playlist url | Youtube live url&gt;</code></td>
                             <td>
                                 <ul>
-                                    <li>$play</li>
+                                    <li>$play Wavin' flag</li>
+                                    <li>$play https://youtu.be/WTJSt4wP2ME</li>
+                                    <li>$play https://www.youtube.com/playlist?list=PLC1670714BCED30AF</li>
+                                    <li>$play https://youtu.be/ueupsBPNkSc</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>stop</td>
+                            <td>Stop what is currently playing.</td>
+                            <td><i style="opacity: 0.5;" class="fa fa-times"></i></td>
+                            <td>$stop</td>
+                            <td>
+                                <ul>
+                                    <li>$stop</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>queue</td>
+                            <td>Displays a list of videos queued to stream.</td>
+                            <td><i style="opacity: 0.5;" class="fa fa-times"></i></td>
+                            <td>$queue</td>
+                            <td>
+                                <ul>
+                                    <li>$queue</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>unqueue</td>
+                            <td>Removes a song from the server's queue.</td>
+                            <td><i style="opacity: 0.5;" class="fa fa-times"></i></td>
+                            <td>$unqueue <code class="input">&lt;song title&gt;</code></td>
+                            <td>
+                                <ul>
+                                    <li>$unqueue Wavin' flag</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>pause</td>
+                            <td>Pause the song currently streaming.</td>
+                            <td><i style="opacity: 0.5;" class="fa fa-times"></i></td>
+                            <td>$pause</td>
+                            <td>
+                                <ul>
+                                    <li>$pause</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>resume</td>
+                            <td>Resume the song paused.</td>
+                            <td>unpause</td>
+                            <td>$resume</td>
+                            <td>
+                                <ul>
+                                    <li>$resume</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>volume</td>
+                            <td>Change the volume of the song currently streaming.</td>
+                            <td>vol</td>
+                            <td>$volume <code class="input">(0 - 200)</code></td>
+                            <td>
+                                <ul>
+                                    <li>$volume 150</li>
+                                    <li>$volume 55</li>
+                                    <li>$volume</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>youtube</td>
+                            <td>Search for a video from YouTube.</td>
+                            <td>yts</td>
+                            <td>$youtube <code class="input">&lt;query&gt;</code></td>
+                            <td>
+                                <ul>
+                                    <li>$youtube Wavin' flag</li>
                                 </ul>
                             </td>
                         </tr>
@@ -494,8 +575,7 @@
                         <tr>
                             <td>announce</td>
                             <td>3</td>
-                            <td>Send an announcement to the announcements channel. Use the flag '-e' before your content to make
-                                the message an embed. If the announcements mention role is set, it will always use it.</td>
+                            <td>Send an announcement to the announcements channel. Use the flag '-e' before your content to make the message an embed. If the announcements mention role is set, it will always use it.</td>
                             <td></td>
                             <td>
                                 <ul>
@@ -1796,8 +1876,7 @@
                             <td>Mode</td>
                             <td>mode</td>
                             <td>A mode to enable/disable a list of commands.</td>
-                            <td data-placement="bottom" data-toggle="popover" data-content="<b>free</b>: All commands can be used.<br><b>lite</b>: All fun commands are disabled.<br><b>strict</b>: Only moderation commands can be used."
-                                data-trigger="hover" data-title="Mode Restrictions">
+                            <td data-placement="bottom" data-toggle="popover" data-content="<b>free</b>: All commands can be used.<br><b>lite</b>: All fun commands are disabled.<br><b>strict</b>: Only moderation commands can be used." data-trigger="hover" data-title="Mode Restrictions">
                                 <ul>
                                     <li>free</li>
                                     <li>lite</li>
@@ -1864,8 +1943,7 @@
                         <tr>
                             <td>Anti-Invite Kick</td>
                             <td>antiinvite-kick</td>
-                            <td>Server moderation tool to kick users that post invites in the server. Note that this cannot be
-                                less than the
+                            <td>Server moderation tool to kick users that post invites in the server. Note that this cannot be less than the
                                 <code class="input">antiinvite-warn</code> setting.
                             </td>
                             <td>
@@ -1939,10 +2017,16 @@
 </html>
 
 <script type="text/javascript">
-    if (window.location.hash) { $(".nav-tabs a[href=\"" + window.location.hash.replace("!", "") + "\"]").tab("show") }
-    $(".nav-tabs a").on("shown.bs.tab", function(tab) { window.location.hash = tab.target.hash.replace("#", "#!") })
+    if (window.location.hash) {
+        $(".nav-tabs a[href=\"" + window.location.hash.replace("!", "") + "\"]").tab("show")
+    }
+    $(".nav-tabs a").on("shown.bs.tab", function(tab) {
+        window.location.hash = tab.target.hash.replace("#", "#!")
+    })
     $("td:empty").append("<i style=\"opacity: 0.5;\" class=\"fa fa-times\"></i>")
     $(function() {
-        $('[data-toggle="popover"]').popover({ html: true })
+        $('[data-toggle="popover"]').popover({
+            html: true
+        })
     })
 </script>
