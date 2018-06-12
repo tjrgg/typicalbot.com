@@ -1643,6 +1643,24 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>Mute role</td>
+                            <td>muterole</td>
+                            <td>A role the the bot will give users when muted.</td>
+                            <td>
+                                <ul>
+                                    <li>disable</li>
+                                    <li>
+                                        <code class="input">&lt;role-name|role-id|role-mention&gt;</code>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit muterole Silent</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>Automatic Role</td>
                             <td>autorole</td>
                             <td>A role that users will gain upon joining the server.</td>
@@ -2065,6 +2083,23 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>Anti-Invite Action</td>
+                            <td>antiinvite-action</td>
+                            <td>Enable warning and kicking when sending invites. AntiInvite must be enabled for this to work.</td>
+                            <td>
+                                <ul>
+                                    <li>disable</li>
+                                    <li>enable</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit antiinvite-action enable</li>
+                                    <li>$settings edit antiinvite-action disable</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>Anti-Invite Warn</td>
                             <td>antiinvite-warn</td>
                             <td>Server moderation tool to warn users that post invites in the server.</td>
@@ -2121,6 +2156,182 @@
                                 <ul>
                                     <li>$settings edit nonickname enable</li>
                                     <li>$settings edit nonickname disable</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Default Permissions</td>
+                            <td>music-permissions</td>
+                            <td>Change the required permission level for users to use all music commands.</td>
+                            <td>
+                                <ul>
+                                    <li>all</li>
+                                    <li>dj</li>
+                                    <li>moderator</li>
+                                    <li>administrator</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-permissions all</li>
+                                    <li>$settings edit music-permissions moderator</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music play Permissions</td>
+                            <td>music-play</td>
+                            <td>Change the required permission level for users to use the `play` music command. Unless set to `off`, this overwrites the `music-permissions` setting.</td>
+                            <td>
+                                <ul>
+                                    <li>off</li>
+                                    <li>all</li>
+                                    <li>dj</li>
+                                    <li>moderator</li>
+                                    <li>administrator</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-play moderator</li>
+                                    <li>$settings edit music-play dj</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Skip Permissions</td>
+                            <td>music-skip</td>
+                            <td>Change the required permission level for users to use the `skip` music command. Unless set to `off`, this overwrites the `music-permissions` setting.</td>
+                            <td>
+                                <ul>
+                                    <li>off</li>
+                                    <li>all</li>
+                                    <li>dj</li>
+                                    <li>moderator</li>
+                                    <li>administrator</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-skip dj</li>
+                                    <li>$settings edit music-skip administrator</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Pause Permissions</td>
+                            <td>music-pause</td>
+                            <td>Change the required permission level for users to use the `pause` music command. Unless set to `off`, this overwrites the `music-permissions` setting.</td>
+                            <td>
+                                <ul>
+                                    <li>off</li>
+                                    <li>all</li>
+                                    <li>dj</li>
+                                    <li>moderator</li>
+                                    <li>administrator</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-pause off</li>
+                                    <li>$settings edit music-pause administrator</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Resume Permissions</td>
+                            <td>music-resume</td>
+                            <td>Change the required permission level for users to use the `resume` music command. Unless set to `off`, this overwrites the `music-permissions` setting.</td>
+                            <td>
+                                <ul>
+                                    <li>off</li>
+                                    <li>all</li>
+                                    <li>dj</li>
+                                    <li>moderator</li>
+                                    <li>administrator</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-resume off</li>
+                                    <li>$settings edit music-resume administrator</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Unqueue Permissions</td>
+                            <td>music-unqueue</td>
+                            <td>Change the required permission level for users to use the `unqueue` music command. Unless set to `off`, this overwrites the `music-permissions` setting.</td>
+                            <td>
+                                <ul>
+                                    <li>off</li>
+                                    <li>all</li>
+                                    <li>dj</li>
+                                    <li>moderator</li>
+                                    <li>administrator</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-unqueue dj</li>
+                                    <li>$settings edit music-unqueue moderator</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Volume Permissions</td>
+                            <td>music-volume</td>
+                            <td>Change the required permission level for users to use the `volume` music command. Unless set to `off`, this overwrites the `music-permissions` setting.</td>
+                            <td>
+                                <ul>
+                                    <li>off</li>
+                                    <li>all</li>
+                                    <li>dj</li>
+                                    <li>moderator</li>
+                                    <li>administrator</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-volume all</li>
+                                    <li>$settings edit music-volume dj</li>
+                                    <li>$settings edit music-volume off</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Time limit</td>
+                            <td>music-timelimit</td>
+                            <td>Change the maximum time limit for a video. Set in seconds. Minimum is 120 seconds (2 minutes). Maximum is 600 seconds (10 minutes). TypicalBot Prime Member maximum is 7200 seconds (2 hours).</td>
+                            <td>
+                                <ul>
+                                    <li>default</li>
+                                    <li>120 - 600</li>
+                                    <li>120 - 7200 <a href="/donate"><span class="badge badge-success">TypicalBot Prime Feature</span></a></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-timelimit 320</li>
+                                    <li>$settings edit music-timelimit default</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Music Queue limit</td>
+                            <td>music-queuelimit</td>
+                            <td>Change the maximum queue limit for a video. Maximum is 10 videos. TypicalBot Prime Member maximum is 100 videos.</td>
+                            <td>
+                                <ul>
+                                    <li>default</li>
+                                    <li>1 - 10</li>
+                                    <li>1 - 100 <a href="/donate"><span class="badge badge-success">TypicalBot Prime Feature</span></a></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>$settings edit music-queuelimit 10</li>
+                                    <li>$settings edit music-queuelimit default</li>
                                 </ul>
                             </td>
                         </tr>
