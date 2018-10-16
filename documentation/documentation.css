@@ -15,6 +15,13 @@ body {
     vertical-align: middle;
     margin-bottom: 8px;
 }
+.circle .tb-small {
+    margin-top: -15px;
+}
+.tb-small {
+    height: 48px;
+    width: 48px;
+}
 
 #background {
     margin-top: 30px;
@@ -22,18 +29,41 @@ body {
     background-color: white;
     border-radius: 10px 10px 0 0;
 }
-@media (min-width: 1000px){
+@media (min-width: 1600px){
     #background {
-        margin-left: 100px;
-        margin-right: 100px;
-        width: calc(100% - 200px);
+        margin-left: 150px;
+        margin-right: 150px;
+        width: calc(100% - 300px);
     }
 }
 
 .doc-category {
-    width: 90px;
     height: 115px;
     text-align: center;
+    cursor: pointer;
+}
+.doc-category.selected {
+    cursor: default
+}
+.doc-category::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    height: 8px;
+    left: 25%;
+    margin-left: -16px;
+    width: 75%;
+    background: #00adff;
+    border-radius: 5px;
+}
+.doc-category.selected::after {
+    opacity: 1;
+}
+
+.doc-category:hover::after{
+    opacity: 1;
+    transition: opacity .2s
 }
 #background .col-md-1 {
     margin-top: 40px;
