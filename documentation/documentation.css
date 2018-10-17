@@ -233,7 +233,7 @@ body {
     #icons {
         display: flex;
         width: 106%;
-        height: 175px !important;
+        height: 160px !important;
         overflow-y: hidden;
         overflow-x: auto;
         flex-wrap: nowrap;
