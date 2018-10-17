@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -10,25 +9,25 @@
     <meta property="og:description" content="Built upon over a year of experience, TypicalBot is the ironically-named bot that is far from typical.">
     <meta property="og:site_name" content="TypicalBot">
     <meta property="og:image" content="https://typicalbot.com/x/images/icon.png">
-    <meta name="viewport" content="width=device-width,initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/x/style.css">
     <link rel="stylesheet" href="/documentation/documentation.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-POYwD7xcktv3gUeZO5s/9nUbRJG/WOmV6jfEGikMJu77LGYO8Rfs2X7URG822aum" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <title>Documentation – TypicalBot</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="/">
-            <img src="/x/images/icon.png" class="align-top">TypicalBot</a>
+        <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="content">
             <ul class="navbar-nav mr-auto">
@@ -54,74 +53,210 @@
     </nav>
 
     <div class="container-fluid" id="background">
-        <div class="row">
-            <div class="offset-md-1"></div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-play fa-2x"></i></div>
+
+        <!-- Desktop icons -->
+        <div class="row" id="icons">
+            <div class="offset-lg-1"></div>
+            <div class="col-lg-1">
+                <div id="qs_toggle" class="doc-category" onclick="change('qs')">
+                    <div class="circle centered blue"><i class="fas fa-play fa-2x"></i></div>
                     <h5>Quick start</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-bullhorn fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="fun_toggle" class="doc-category" onclick="change('fun')">
+                    <div class="circle centered blue"><i class="fas fa-bullhorn fa-2x"></i></div>
                     <h5>Fun</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-music fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="music_toggle" class="doc-category" onclick="change('music')">
+                    <div class="circle centered blue"><i class="fas fa-music fa-2x"></i></div>
                     <h5>Music</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-images fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="images_toggle" class="doc-category" onclick="change('images')">
+                    <div class="circle centered blue"><i class="fas fa-images fa-2x"></i></div>
                     <h5>Images</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-gavel fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="moderation_toggle" class="doc-category" onclick="change('moderation')">
+                    <div class="circle centered blue"><i class="fas fa-gavel fa-2x"></i></div>
                     <h5>Moderation</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-toolbox fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="utility_toggle" class="doc-category" onclick="change('utility')">
+                    <div class="circle centered blue"><i class="fas fa-toolbox fa-2x"></i></div>
                     <h5>Utility</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category selected">
+            <div class="col-lg-1">
+                <div id="tb_toggle" class="doc-category" onclick="change('tb')">
                     <!-- Update svg url when published on typicalbot.com -->
-                    <div class="circle blue"><img class="tb-small" src="https://i.nsylke.me/typicalbot.svg" /></div>
+                    <div class="circle centered blue"><img class="tb-small" src="https://i.nsylke.me/typicalbot.svg" /></div>
                     <h5>TypicalBot</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-question fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="help_toggle" class="doc-category" onclick="change('help')">
+                    <div class="circle centered blue"><i class="fas fa-question fa-2x"></i></div>
                     <h5>Help</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-scroll fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="pr_toggle" class="doc-category" onclick="change('pr')">
+                    <div class="circle centered blue"><i class="fas fa-scroll fa-2x"></i></div>
                     <h5>Public roles</h5>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="doc-category">
-                    <div class="circle blue"><i class="fas fa-cogs fa-2x"></i></div>
+            <div class="col-lg-1">
+                <div id="settings_toggle" class="doc-category" onclick="change('settings')">
+                    <div class="circle centered blue"><i class="fas fa-cogs fa-2x"></i></div>
                     <h5>Settings</h5>
                 </div>
             </div>
         </div>
-        <div class="divider"></div>
+        <!-- end Desktop icons -->
+
+        <div class="divider"> </div>
+        <div class="tab-content">
+
+            <!-- Quick start content -->
+            <div id="qs_tab" role="tabpanel" class="tab-pane" aria-labelledby="qs_tab">
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
+
+                            <h4>Autorole</h4>
+                            <i class="fas fa-info-circle fa-lg small-only"></i>
+                        </div>
+                            <div class="divider"></div>
+                            <div class="container">
+                            <h5>
+                                Automatically assign a role for users who join your server.
+                            </h5>
+                        </div>
+                        <div class="highlight left">
+                            <i class="far fa-angle-double-right fa-lg"></i>
+                            <h5> $set edit autorole <span>role-name-here</span></h5>
+                         </div>
+                         <div class="highlight right">
+                             <i class="fas fa-info-circle fa-lg"></i>
+                             <h5 class="large-only">More info</h5>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
+
+                            <h4>Autorole</h4>
+                            <i class="fas fa-info-circle fa-lg small-only"></i>
+                        </div>
+                            <div class="divider"></div>
+                            <div class="container">
+                            <h5>
+                                Automatically assign a role for users who join your server.
+                            </h5>
+                        </div>
+                        <div class="highlight left">
+                            <i class="far fa-angle-double-right fa-lg"></i>
+                            <h5> $set edit autorole <span>role-name-here</span></h5>
+                         </div>
+                         <div class="highlight right">
+                             <i class="fas fa-info-circle fa-lg"></i>
+                             <h5 class="large-only">More info</h5>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End quick start content -->
+
+            <!-- Fun content -->
+            <div id="fun_tab" role="tabpanel" class="tab-pane" aria-labelledby="fun_tab">
+                tab fun
+            </div>
+            <!-- End fun content -->
+
+            <!-- Music content -->
+            <div id="music_tab" role="tabpanel" class="tab-pane" aria-labelledby="music_tab">
+                tab music
+            </div>
+            <!-- End music content -->
+
+            <!-- Images content -->
+            <div id="images_tab" role="tabpanel" class="tab-pane" aria-labelledby="images_tab">
+                tab images
+            </div>
+            <!-- End images content -->
+
+            <!-- Moderation content -->
+            <div id="moderation_tab" role="tabpanel" class="tab-pane" aria-labelledby="moderation_tab">
+                tab moderation
+            </div>
+            <!-- End moderation content -->
+
+            <!-- Utility content -->
+            <div id="utility_tab" role="tabpanel" class="tab-pane" aria-labelledby="utility_tab">
+                tab Utility
+            </div>
+            <!-- End utility content -->
+
+            <!-- TypicalBot content -->
+            <div id="tb_tab" role="tabpanel" class="tab-pane" aria-labelledby="tb_tab">
+                tab TB
+            </div>
+            <!-- End TypicalBot content -->
+
+            <!-- Help content -->
+            <div id="help_tab" role="tabpanel" class="tab-pane" aria-labelledby="help_tab">
+                tab help
+            </div>
+            <!-- End help content -->
+
+            <!-- public roles content -->
+            <div id="pr_tab" role="tabpanel" class="tab-pane" aria-labelledby="pr_tab">
+                tab public roles
+            </div>
+            <!-- End public roles content -->
+
+            <!-- Settings content -->
+            <div id="settings_tab" role="tabpanel" class="tab-pane" aria-labelledby="settings_tab">
+                tab settings
+            </div>
+            <!-- End settings  content -->
+
+
+        </div>
+
+
+        <script>
+        var ready = false
+        var current = "qs"
+            $(() => {
+                setTimeout(() => {
+                    $("#qs_toggle").addClass("selected")
+                    $("#qs_tab").show()
+                    ready = true
+                }, 10)
+            })
+            function change(id){
+                if (!ready){return}
+                $(".selected").removeClass("selected")
+                $("#" + id + "_toggle").addClass("selected")
+                $("#" + current + "_tab").hide()
+                $("#" + id + "_tab").show()
+                current = id
+            }
+        </script>
     </div>
-
-
 
 
 </body>
