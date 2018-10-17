@@ -95,10 +95,10 @@ code[class="mention"] {
     color: red;
 }
 .navbar-toggler-icon{
-    background-image: url("/x/toggler.svg");
+    background-image: url("/x/toggler.svg") !important;
 }
 .navbar-toggler {
-    border-color: white ;
+    border: white 1px solid !important;
 }
 .nav-item {
         color: white !important
