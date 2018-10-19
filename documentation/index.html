@@ -15,18 +15,19 @@
     <link rel="stylesheet" href="/x/style.css">
     <link rel="stylesheet" href="/documentation/documentation.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-POYwD7xcktv3gUeZO5s/9nUbRJG/WOmV6jfEGikMJu77LGYO8Rfs2X7URG822aum" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <title>Documentation – TypicalBot</title>
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="content">
             <ul class="navbar-nav mr-auto">
@@ -127,27 +128,25 @@
             <div id="qs_tab" role="tabpanel" class="tab-pane" aria-labelledby="qs_tab">
                 <div class="row">
                     <div class="col-lg">
-                        <div class="box">
+                        <div class="box" data-id="0" data-level="3+" data-values="disable • [role-name|role-id|role-mention]" data-examples="$settings edit autorole [User]" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
-                            <h4>Autorole</h4>
-                            <i class="fas fa-info-circle fa-lg small-only"></i>
-                        </div>
+                                <h4>Autorole</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
                             <div class="divider"></div>
-                            <div class="container">
                             <h5>
-                                Automatically assign a role for users who join your server.
+                                A role that users will gain upon joining the server.
                             </h5>
-                        </div>
-                        <div class="highlight left">
-                            <i class="far fa-angle-double-right fa-lg"></i>
-                            <h5> $set edit autorole <span>role-name-here</span></h5>
-                         </div>
-                         <div class="highlight right">
-                             <i class="fas fa-info-circle fa-lg"></i>
-                             <h5 class="large-only">More info</h5>
-                          </div>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $set edit autorole <span>role-name-here</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur('0')">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg">
@@ -155,27 +154,75 @@
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
-                            <h4>Autorole</h4>
-                            <i class="fas fa-info-circle fa-lg small-only"></i>
-                        </div>
+                                <h4>Administrator role</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
                             <div class="divider"></div>
-                            <div class="container">
                             <h5>
-                                Automatically assign a role for users who join your server.
+                                Administrator role that will grant users with the role(s) permission level 3.
                             </h5>
-                        </div>
-                        <div class="highlight left">
-                            <i class="far fa-angle-double-right fa-lg"></i>
-                            <h5> $set edit autorole <span>role-name-here</span></h5>
-                         </div>
-                         <div class="highlight right">
-                             <i class="fas fa-info-circle fa-lg"></i>
-                             <h5 class="large-only">More info</h5>
-                          </div>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $set edit adminrole <span>role-name-here</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box">
+                            <div style="display: flex">
+                                <div class="circle blue small"><img class="tb-tiny" src="https://i.nsylke.me/typicalbot.svg" /></div>
+
+                                <h4>Commands</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Receive a list of TypicalBot's commands.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $commands</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>Play</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Streams a song or playlist to a voice channel from YouTube.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $play <span class="code">&#x3C;song-name | youtube-url&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <button onclick="change('fun'); window.scrollTo(0,0)" class="next_button">See more</button>
+                </div>
             </div>
+
             <!-- End quick start content -->
 
             <!-- Fun content -->
@@ -237,30 +284,192 @@
 
 
         <script>
-        var ready = false
-        var current = "qs"
+            var ready = false
+            var current = "qs"
             $(() => {
                 setTimeout(() => {
                     $("#qs_toggle").addClass("selected")
                     $("#qs_tab").show()
                     ready = true
                 }, 10)
+                $(".fas.fa-info-circle.fa-lg.small-only").click(function(e) {
+                    try {
+                        var box = $($($(this).parent()).parent())
+                        var id = box.attr("data-id")
+                        if (!id) {
+                            blur()
+                        } else {
+                            blur(id)
+                        }
+
+                    } catch (e) {
+                        console.log(e)
+                    }
+
+                })
+                $(".highlight.right").click(function(e) {
+                    try {
+                        var box = $($(this).parent())
+                        var id = box.attr("data-id")
+                        if (!id) {
+                            blur()
+                        } else {
+                            blur(id)
+                        }
+
+                    } catch (e) {
+                        console.log(e)
+                    }
+
+                })
             })
-            function change(id){
-                if (!ready){return}
+
+            function change(id) {
+                if (!ready) {
+                    return
+                }
                 $(".selected").removeClass("selected")
                 $("#" + id + "_toggle").addClass("selected")
                 $("#" + current + "_tab").hide()
                 $("#" + id + "_tab").show()
                 current = id
             }
+
+            function blur(id) {
+                $(".blurred").addClass("active")
+                $("#background").addClass("blurred")
+                $(".zoom").addClass("active")
+                if (id) {
+                    var x = $('[data-id="' + id + '"]')
+                    var level = x.attr("data-level")
+                    var values = x.attr("data-values")
+                    var icon = x.attr("data-icon")
+                    var examples = x.attr("data-examples")
+                    var description = x.children("h5").text().trim()
+                    var title = x.children("div").children("h4").text().trim()
+                    values = values.split("•")
+                    values = values.map(clean)
+                    examples = examples.split("•")
+                    examples = examples.map(clean)
+
+                    console.log(level)
+                    console.log(values)
+                    console.log(examples)
+                    console.log(description)
+                    console.log(title)
+
+                    $("#level").text(level)
+                    $("#name").text(title)
+                    $("#title").text(title)
+                    $("#description").text(description)
+                    $("#values").html(values.join("\n"))
+                    $("#examples").html(examples.join("\n"))
+                    $("#zoom-icon").removeClass("fa-cogs")
+                    $("#zoom-icon").addClass("fa-" + icon)
+
+                }
+            }
+
+            function clean(data) {
+                data = "<h5>" + data + "</h5>"
+                data = data.replace(/\[/gim, "<span class=\"code\">&#x3C;")
+                data = data.replace(/\]/gim, "&#x3E;</span>")
+                return data
+            }
+
+            function disableBlur() {
+                $(".blurred").removeClass("active")
+                $("#background").removeClass("blurred")
+                $(".zoom").removeClass("active")
+
+
+            }
         </script>
     </div>
+    <div class="blurred" onclick="disableBlur()"></div>
+    <div class="zoom">
+        <div class="titlebar">
+            <div class="circle blue small"><i id="zoom-icon" class="fas fa-cogs fa-2x"></i></div>
+            <h5 id="title"> Administrator role</h5>
+            <i class="fas fa-angle-left fa-lg small-only"></i>
+        </div>
+        <div class="divider"></div>
+        <div class="description">
+            <h6 id="description"> Administrator role that will grant users with the role(s) permission level 3. </h6>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4>Command name</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div>
+                        <h5 id="name">adminrole</h5>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4>Values</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div id="values">
+                        <h5>disable</h5>
+                        <h5><span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>add <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>remove <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>clear</h5>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4>level required</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div>
+                        <h5 id="level">3+ </h5>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4>Examples</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div id="examples">
+                        <h5>$set edit adminrole disable</h5>
+                        <h5>$set edit adminrole <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole add <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole remove <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole clear</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button class="return_button" onclick="disableBlur()">Go back</button>
+    </div>
+
 
 
 </body>
 
-</html>
+
 
 <script type="text/javascript">
     if (window.location.hash) {
@@ -276,3 +485,5 @@
         })
     })
 </script>
+
+</html>
