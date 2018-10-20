@@ -150,7 +150,8 @@
                         </div>
                     </div>
                     <div class="col-lg">
-                        <div class="box">
+                        <div class="box" data-id="1" data-level="3+" data-values="disable • [role-name|role-id|role-mention] • add [role-name|role-id|role-mention] • remove [role-name|role-id|role-mention] • clear" data-examples="$settings edit adminrole Administrators • $settings edit adminrole add Administrators • $settings edit adminrole remove Administrators • $settings edit adminrole clear"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
@@ -174,7 +175,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg">
-                        <div class="box">
+                        <div class="box" data-id="2" data-level="0 - Server Member" data-values="$commands" data-aliases="cmds" data-examples="$commands • $cmds" data-icon="tb">
                             <div style="display: flex">
                                 <div class="circle blue small"><img class="tb-tiny" src="https://i.nsylke.me/typicalbot.svg" /></div>
 
@@ -196,7 +197,7 @@
                         </div>
                     </div>
                     <div class="col-lg">
-                        <div class="box">
+                        <div class="box" data-id="3" data-level="0 - Server Member" data-values="$play [song-name] • $play [Youtube url] • $play [Youtube playlist url] • $play [Youtube live url]  " data-examples="$play Wavin' flag • $play https://youtu.be/dQw4w9WgXcQ • $play https://www.youtube.com/playlist?list=PLC1670714BCED30AF • $play https://youtu.be/ueupsBPNkSc" data-icon="music">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
 
@@ -227,8 +228,294 @@
 
             <!-- Fun content -->
             <div id="fun_tab" role="tabpanel" class="tab-pane" aria-labelledby="fun_tab">
-                tab fun
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="4" data-level="0 - Server Member" data-values="$8ball • $8ball [question]" data-examples="$8ball Am i an awesome human being?" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>8ball</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Ask the magic 8ball a question.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $8ball</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur(" 4")">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="5" data-level="0 - Server Member" data-values="$cookie • $cookie [user-mention]" data-examples="$cookie @HyperCoder" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>cookie</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Give another user a cookie, or keep them all for yourself.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $hug <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="6" data-level="0 - Server Member" data-aliases="die" data-values="$dice • $dice [number-of-sides]" data-examples="$dice • $dice 24" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+                                <h4>dice</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Roll a n-sided die.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $dice</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="7" data-level="0 - Server Member" data-values="$hug • $hug [user-mention]" data-examples="$hug • $hug @Hypercoder " data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>hug</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                'Hug' another user in the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $hug <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="8" data-level="0 - Server Member" data-values="$joke" data-examples="$joke" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+                                <h4>joke</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Gives you a random joke.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $joke</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="9" data-level="0 - Server Member" data-values="$punch • $punch [user-mention]" data-examples="$punch • $punch @Packer" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>punch</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                'Punch' another user in the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $punch <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="10" data-level="3+" data-values="$quote" data-examples="$quote" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>quote</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Gives you a random quote.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $quote</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="11" data-level="0 - Server Member" data-values="$shoot • $shoot [user-mention]" data-examples="$shoot • $shoot @packer" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>shoot</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                'Shoot' another user in the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $shoot <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="12" data-level="0 - Server Member" data-values="$slap • $slap [user-mention]" data-examples="$slap • $slap @packer" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>slap</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                'Slap' another user in the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $slap <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="13" data-level="0 - Server Member" data-values="$stab • $stab [user-mention]" data-examples="$stab • $stab @packer" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>stab</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                'Stab' another user in the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $stab <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="14" data-level="0" data-values="$urban [query]" data-examples="$urban pineapple" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>urban</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Grabs the definition from Urban Dictionary for the specified word.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $urban <span class="code">&#x3C;query&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="15" data-level="0" data-values="$yomomma" data-aliases="yomama" data-examples="$yomomma" data-icon="bullhorn">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-bullhorn fa-2x"></i></div>
+
+                                <h4>yomomma</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Gives you a random yomomma joke.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $yomomma </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
             <!-- End fun content -->
 
             <!-- Music content -->
@@ -336,6 +623,7 @@
             }
 
             function blur(id) {
+                window.scrollTo(0, 0)
                 $(".blurred").addClass("active")
                 $("#background").addClass("blurred")
                 $(".zoom").addClass("active")
@@ -344,6 +632,7 @@
                     var level = x.attr("data-level")
                     var values = x.attr("data-values")
                     var icon = x.attr("data-icon")
+                    var aliases = x.attr("data-aliases")
                     var examples = x.attr("data-examples")
                     var description = x.children("h5").text().trim()
                     var title = x.children("div").children("h4").text().trim()
@@ -357,7 +646,20 @@
                     console.log(examples)
                     console.log(description)
                     console.log(title)
+                    if (icon == "cogs") {
+                        $("#values-title").text("Values")
+                    } else {
+                        $("#values-title").text("Usage")
+                    }
+                    if (aliases) {
+                        aliases = aliases.split("•")
+                        aliases = aliases.map(clean)
+                        $("#aliases").html(aliases.join("\n"))
+                        $("#aliases-box").show()
+                    } else {
+                        $("#aliases-box").hide()
 
+                    }
                     $("#level").text(level)
                     $("#name").text(title)
                     $("#title").text(title)
@@ -366,6 +668,13 @@
                     $("#examples").html(examples.join("\n"))
                     $("#zoom-icon").removeClass("fa-cogs")
                     $("#zoom-icon").addClass("fa-" + icon)
+                    if (icon == "tb") {
+                        $("#zoom-tb-icon").show()
+                        $("#zoom-icon").hide()
+                    } else {
+                        $("#zoom-tb-icon").hide()
+                        $("#zoom-icon").show()
+                    }
 
                 }
             }
@@ -389,7 +698,10 @@
     <div class="blurred" onclick="disableBlur()"></div>
     <div class="zoom">
         <div class="titlebar">
-            <div class="circle blue small"><i id="zoom-icon" class="fas fa-cogs fa-2x"></i></div>
+            <div class="circle blue small">
+                <i id="zoom-icon" class="fas fa-cogs fa-2x"></i>
+                <img id="zoom-tb-icon" style="display: none;" class="tb-tiny" src="https://i.nsylke.me/typicalbot.svg" />
+            </div>
             <h5 id="title"> Administrator role</h5>
             <i class="fas fa-angle-left fa-lg small-only"></i>
         </div>
@@ -415,7 +727,7 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        <h4>Values</h4>
+                        <h4 id="values-title">Values</h4>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-12">
@@ -440,6 +752,23 @@
                     <div>
                         <h5 id="level">3+ </h5>
 
+                    </div>
+
+                </div>
+            </div>
+            <div class="row" id="aliases-box">
+                <div class="col">
+                    <div>
+                        <h4>Aliases</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div id="aliases">
+                        <h5>$set edit adminrole disable</h5>
+                        <h5>$set edit adminrole <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole add <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole remove <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole clear</h5>
                     </div>
 
                 </div>
