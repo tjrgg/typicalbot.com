@@ -11,6 +11,9 @@ nav {
     color: white;
 }
 
+.zoom {
+    display: none
+}
 .centered {
     margin-left: auto;
     margin-right: auto;
@@ -70,7 +73,7 @@ nav {
 
 #background {
     margin-top: 30px;
-    height: 2000px;
+    min-height: 2000px;
     background-color: white;
     border-radius: 10px 10px 0 0;
 }
@@ -307,6 +310,7 @@ nav {
     }
 
     .zoom.active {
+        display: block;
         height: 200%;
         width: 100%;
         position: absolute;
@@ -481,6 +485,7 @@ nav {
     }
 
     .zoom.active {
+        display: block;
         height: calc(100% - 40px);
         width: 100%;
         position: absolute;
@@ -595,6 +600,7 @@ nav {
     }
 
     .zoom.active {
+        display: block;
         min-height: 320px;
         min-width: 1000px;
         position: absolute;
@@ -722,6 +728,7 @@ nav {
     }
 
     .zoom.active {
+        display: block;
         min-height: 320px;
         min-width: 1000px;
         position: absolute;
