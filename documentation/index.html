@@ -246,7 +246,7 @@
                                 <i class="far fa-angle-double-right fa-lg"></i>
                                 <h5> $8ball</h5>
                             </div>
-                            <div class="highlight right" onclick="blur(" 4")">
+                            <div class="highlight right" onclick="blur()">
                                 <i class="fas fa-info-square fa-lg"></i>
                                 <h5 class="large-only">More info</h5>
                             </div>
@@ -266,7 +266,7 @@
                             </h5>
                             <div class="highlight left">
                                 <i class="far fa-angle-double-right fa-lg"></i>
-                                <h5> $hug <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                                <h5> $cookie <span class="code">&#x3C;user-mention&#x3E;</span></h5>
                             </div>
                             <div class="highlight right" onclick="blur()">
                                 <i class="fas fa-info-square fa-lg"></i>
@@ -520,13 +520,288 @@
 
             <!-- Music content -->
             <div id="music_tab" role="tabpanel" class="tab-pane" aria-labelledby="music_tab">
-                tab music
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="16" data-level="0 - Server Member" data-values="$play [song-name] • $play [Youtube url] • $play [Youtube playlist url] • $play [Youtube live url]  " data-examples="$play Wavin' flag • $play https://youtu.be/dQw4w9WgXcQ • $play https://www.youtube.com/playlist?list=PLC1670714BCED30AF • $play https://youtu.be/ueupsBPNkSc" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>Play</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Streams a song or playlist to a voice channel from YouTube.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $play <span class="code">&#x3C;song-name | youtube-url&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="17" data-level="1 - Server DJ (Default)" data-values="$stop" data-examples="$stop" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>stop</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Stop what is currently playing.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $stop </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="18" data-level="0 - Server Member (Default)" data-values="$queue" data-examples="$queue" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>queue</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Displays a list of videos queued to stream.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $queue </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="19" data-level="0 - Server Member (Default)" data-values="$unqueue [song title]" data-examples="$unqueue Wavin' flag" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>unqueue</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Removes a song from the server's queue.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $unqueue <span class="code">&#x3C;song-title&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="20" data-level="0 - Server Member (Default)" data-values="$pause" data-examples="$pause" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>pause</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Pause the song currently streaming.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $pause</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="21" data-level="0 - Server Member (Default)" data-values="$resume" data-aliases="unpause" data-examples="$resume" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>resume</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                 	Resume the song paused.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $resume</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="22" data-aliases="vol" data-level="0 - Server Member (Default)" data-values="$volume • $volume [0-200]" data-examples="$volume • $volume 145 • $volume 55 • $volume" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>volume</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Change the volume of the content currently streaming.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $volume</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="23" data-aliases="yts" data-level="0 - Server Member (Default)" data-values="$youtube <query>" data-examples="$youtube Wavin' flag" data-icon="music">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
+
+                                <h4>youtube</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Search for a video from YouTube.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $youtube <span class="code">&#x3C;query&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End music content -->
 
             <!-- Images content -->
             <div id="images_tab" role="tabpanel" class="tab-pane" aria-labelledby="images_tab">
-                tab images
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="24" data-aliases="rabbit" data-level="0 - Server Member" data-values="$bunny" data-examples="$bunny" data-icon="images">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-images fa-2x"></i></div>
+
+                                <h4>bunny</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                 	Gives you a random bunny picture.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $bunny</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="25" data-aliases="kitty • kitten" data-level="0 - Server Member" data-values="$cat" data-examples="$cat" data-icon="images">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-images fa-2x"></i></div>
+
+                                <h4>cat</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                 	Gives you a random cat picture.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $cat</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="26" data-aliases="puppy • doggy" data-level="0 - Server Member" data-values="$dog" data-examples="$dog" data-icon="images">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-images fa-2x"></i></div>
+
+                                <h4>dog</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                 	Gives you a random dog picture.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $dog </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="27" data-level="0 - Server Member" data-values="$tiger" data-examples="$tiger" data-icon="images">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-images fa-2x"></i></div>
+
+                                <h4>tiger</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                    Gives you a random tiger picture.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $tiger </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- End images content -->
 
