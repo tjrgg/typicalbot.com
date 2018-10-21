@@ -807,7 +807,313 @@
 
             <!-- Moderation content -->
             <div id="moderation_tab" role="tabpanel" class="tab-pane" aria-labelledby="moderation_tab">
-                tab moderation
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="28"  data-level="2 - Server Moderator" data-values="$adcheck" data-examples="$adcheck" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>adcheck</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                 	Check if any members of a server have a server invite in their playing status.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $adcheck </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="29" data-level="3 - Server Administrator" data-values="$announce [content] • $announce -e [content]" data-examples="$announce Hey everyone! We have some updates! • $announce -e This is an embedded announcement!" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>announce</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                     	Send an announcement to the announcements channel. <br>use '-e' to embed the message.<br> Will use the announcements mention role if set.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $announce <span class="code">&#x3C;content&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="30" data-level="2 - Server Moderator" data-values="$ban [user-mention] • $ban [user-mention] [days-to-purge] • $ban [user-mention] [reason] • $ban [user-mention] [days-to-purge] [reason] • $ban [user-mention] [ban-duration] • $ban [user-mention] [ban-duration] [reason] • $ban [user-mention] [ban-duration] [days-to-purge] [reason]" data-examples="    $ban @Xenotater•    $ban @Xenotater 2•    $ban @Xenotater Shamelessly promoting his YouTube channel.•    $ban @Xenotater 3 Shamelessly promoting his YouTube channel.•    $ban @Xenotater 2h 2m 5s•    $ban @Xenotater 3d Shamelessly promoting his YouTube channel.•    $ban @Xenotater 2h 1s 2 Shamelessly promoting his YouTube channel." data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>ban</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                    Ban a member from the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $ban <span class="code">&#x3C;user-mention&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="31" data-level="2 - Server Moderator" data-values="$ignore commands • $ignore invites" data-examples="$ignore invites • $ignore commands" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>ignore</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                    Makes the bot ignore commands or invites in a channel.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $ignore <span class="code">&#x3C;commands | invites&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="32" data-level="2 - Server Moderator" data-values="$kick [user-mention] • $kick [user-mention] [reason]" data-examples="$kick @Xenotater • $kick @Xenotater Shamelessly promoting his YouTube channel." data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+                                <h4>kick</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                     	Kick a member from the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $kick <span class="code">&#x3C;user-mention&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="33" data-level="2 - Server Moderator" data-values="$purge [message-count] • $purge [message-count] [reason] • $purge [user-mention] [message-count] [reason] • $purge [#channel-mention] [message-count] [reason] • $purge [@role-mention] [message-count] [reason] • $purge me [message-count] • $purge you [message-count] • $purge bots [message-count]" data-examples="$purge 50 • $purge @Xenotater 22 • $purge @Xenotater 27 Shamelessly promoting his YouTube channel. • $purge #lounge 2 • $purge #lounge 3 Shamelessly promoting his YouTube channel. • $purge @Administrators 3 • $purge @Administrators 83 Shamelessly promoting his YouTube channel. • $purge me 8 • $purge me 8 Spam! • $purge you 83 • $purge you 18 Bot is sending so many responses. • $purge bots 54 • $purge bots Too many bot messages!" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>purge</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                    Purge messages in a channel.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $purge <span class="code">&#x3C;number-of-messages&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="34" data-level="2 - Server Moderator" data-values="$reason latest [reason] • $reason [case-id] [reason]" data-examples="$reason latest Because i said so! • $reason 2 Because I said so!" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>reason</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Change or set a reason for a case in moderation logs.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $reason <span class="code">&#x3C;case-id&#x3E;</span> <span class="code">&#x3C;reason&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="35" data-level="0 - Server Member" data-values="$roles help • $roles list • $roles information [role-name|role-id|role-mention]• $roles information members [role-name|role-id|role-mention] • $roles give [user-mention|user-id] [role-name|role-id|role-mention] (level 3+) • $roles take [user-mention|user-id] [role-name|role-id|role-mention] (level 3+)•$roles public list • $roles public add [role-name|role-id|role-mention] (level 3+) • $role public clear (level 3+)" data-examples="$roles help • $roles list • $roles info @Administrator • $roles info members @Administrator • $roles give @Xenotater Administrator • $roles take @Xenotater Administrator • $roles public list • $roles public add Administrator • $roles public remove Administrator • $roles public clear" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>roles</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                    Manage or list the server's roles or public roles.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $roles help </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="36" data-aliases="speak" data-level="2 - Server Moderator" data-values="$say [content] • $say [channel-mention] [content]" data-examples="$say Help me! • $say #general Hey guys!" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>say</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                            Makes the bot send a message with the content used.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $say <span class="code">&#x3C;content&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="37" data-level="2 - Server Moderator" data-values="$softban [user-mention] • $softban [user-mention] [days-to-purge] • $softban [user-mention] [reason] • $softban [user-mention] [days-to-purge] [reason]" data-examples="$softban @Xenotater • $softban @Xenotater 2 • $softban @Xenotater Shamelessly promoting his YouTube channel. • $softban @Xenotater 2 Shamelessly promoting his YouTube channel." data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>softban</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                            Bans and unbans a member from the server, essentially kicking them and clearing their messages.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $softban  <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="38"data-level="2 - Server Moderator" data-values="$unban [user-id] • $unban [user-id] [reason]" data-examples="$unban 187980183569956864 • $unban 187980183569956864 Agreed to stop shamelessly promoting his YouTube channel." data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>unban</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Unban a user from the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $unban <span class="code">&#x3C;user-id&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="39" data-level="2 - Server Moderator" data-values="$unignore commands • $unignore invites" data-examples="$unignore commands • $unignore invites" data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>unignore</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                             	Makes the bot unignore commands or invites in a channel.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $unignore <span class="code">&#x3C;commands/ignore&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="40" data-level="2 - Server Moderator" data-values="$warn [user-mention] • $warn [user-mention] [reason]" data-examples="$warn @Xenotater • $warn @Xenotater Shamelessly promoting his YouTube channel." data-icon="gavel">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-gavel fa-2x"></i></div>
+
+                                <h4>warn</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                    Warn a member in the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $warn <span class="code">&#x3C;user-mention&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">                    </div>
+                </div>
+
             </div>
             <!-- End moderation content -->
 
