@@ -6,6 +6,10 @@
     text-align: center;
     min-height: 90vh;
     margin-top: 50px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 #landing .buttons {
@@ -14,10 +18,9 @@
     left: 10px;
     display: flex;
     flex-direction: row;
-    font-family: 'Segoe UI'
 }
 
-#landing .buttons .button {
+.button {
     color: white;
     background-color: #00adff;
     border-radius: 50%;
@@ -29,7 +32,10 @@
     align-items: center;
     margin-right: 7px;
     transition: background-color .2s ease-in-out
+}
 
+.mobile-buttons {
+    display: none;
 }
 
 #landing .buttons .button:hover {
@@ -39,13 +45,6 @@
 
 #landing .buttons a {
     text-decoration: none
-}
-
-#landing {
-    user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
 }
 
 #landing img {
@@ -89,10 +88,10 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
     border-radius: 10px;
     transition: background-color .2s ease-in-out
-
 }
+
 .big-button:hover {
-        background-color: #009be5;
+    background-color: #009be5;
 }
 
 .small-button {
@@ -105,10 +104,10 @@
     margin-left: auto;
     margin-right: auto;
     transition: color .2s ease-in-out
-
 }
+
 .small-button:hover {
-        color: #009be5 !important;
+    color: #009be5 !important;
 }
 
 .bottom .join-us {
@@ -121,13 +120,62 @@
     margin-right: auto;
     cursor: pointer;
     transition: color .2s ease-in-out
-
 }
 
 .bottom .join-us i {
     margin-right: 8px;
     font-size: 23px;
 }
+
 .bottom .join-us:hover {
-        color: #009be5 !important;
+    color: #009be5 !important;
+}
+
+@media (max-width: 600px) {
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .big-button {
+        width: 310px;
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #landing {
+        max-width: 99%;
+    }
+
+    .top {
+        margin-top: 15px
+    }
+
+    .buttons {
+        display: none !important;
+    }
+
+    .join-us {
+        display: none !important
+    }
+
+    .mobile-buttons {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        width: 145px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+    #landing {
+        max-width: 90% !important
+    }
 }
