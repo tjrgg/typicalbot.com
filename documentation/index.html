@@ -96,7 +96,7 @@
             <div class="col-lg-1">
                 <div id="tb_toggle" class="doc-category" onclick="change('tb')">
                     <!-- Update svg url when published on typicalbot.com -->
-                    <div class="circle centered blue"><img class="tb-small" src="https://i.nsylke.me/typicalbot.svg" /></div>
+                    <div class="circle centered blue"><img class="tb-small" src="https://typicalbot.com/x/typicalbot.svg" /></div>
                     <h5>TypicalBot</h5>
                 </div>
             </div>
@@ -177,7 +177,7 @@
                     <div class="col-lg">
                         <div class="box" data-id="2" data-level="0 - Server Member" data-values="$commands" data-aliases="cmds" data-examples="$commands • $cmds" data-icon="tb">
                             <div style="display: flex">
-                                <div class="circle blue small"><img class="tb-tiny" src="https://i.nsylke.me/typicalbot.svg" /></div>
+                                <div class="circle blue small"><img class="tb-tiny" src="https://typicalbot.com/x/typicalbot.svg" /></div>
 
                                 <h4>Commands</h4>
                                 <i class="fas fa-info-circle fa-lg small-only"></i>
@@ -201,7 +201,7 @@
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
 
-                                <h4>Play</h4>
+                                <h4>play</h4>
                                 <i class="fas fa-info-circle fa-lg small-only"></i>
                             </div>
                             <div class="divider"></div>
@@ -527,7 +527,7 @@
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-music fa-2x"></i></div>
 
-                                <h4>Play</h4>
+                                <h4>play</h4>
                                 <i class="fas fa-info-circle fa-lg small-only"></i>
                             </div>
                             <div class="divider"></div>
@@ -1119,7 +1119,284 @@
 
             <!-- Utility content -->
             <div id="utility_tab" role="tabpanel" class="tab-pane" aria-labelledby="utility_tab">
-                tab Utility
+
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="41" data-level="0 - Server Member" data-values="$bots • $bots [page-number]" data-examples="$bots • $bots 2" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>bots</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Gives a list of bots from Carbonitex sorted by server count.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $bots <span class="code">&#x3C;page-number&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="42" data-level="0 - Server Member" data-aliases="discrim" data-values="$discriminator • $discriminator [discriminator]" data-examples="$discriminator • $discriminator 5233" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>discriminator</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Provides a list of all users with a given discriminator.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $discriminator</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="43" data-level="0 - Server Member" data-values="$hex [random] • $hex [hex-code]" data-examples="$hex random • $hex #00adff • $hex 00adff" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>hex</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Sends a preview of a hex color.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $hex <span class="code">&#x3C;hex-code | random&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="44" data-level="0 - Server Member" data-values="$mylevel" data-aliases="level" data-examples="$mylevel" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>mylevel</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Shows you your permission level specific to the server requested it.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $mylevel </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="45"data-level="0 - Server Member" data-aliases="nick" data-values="$nickname • $nickname reset • $nickname [new-nickname] • $nickname [user-mention] (level 2+) • $nickname [user-mention] reset (level 2+) • $nickname [user-mention] [new-nickname] " data-examples="$nickname • $nickname reset • $nickname @AKSKL • $nickname @AKSKL reset • $nickname @AKSKL Mr. Akskl" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>nickname</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Change or clear either your nickname or another user's nickname.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $nickname <span class="code">&#x3C;new-nickname&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="46" data-level="0 - Server Member" data-values="$randomuser" data-examples="$randomuser" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>randomuser</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Selects a random member in the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $randomuser </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="47" data-level="0 - Server Member" data-values="$search [user-name] • $search [user-name] [page-number] • $search [nick-name] • $search [nick-name] [page-number] " data-examples="$search HyperCoder • $search HyperCoder 2" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>search</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Searches in the user list for a username or nickname.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $search <span class="code">&#x3C;user-name&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="48" data-level="0 - Server Member" data-aliases="sinfo" data-values="$serverinfo" data-examples="$serverinfo" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>serverinfo</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                            Displays the server's information.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $serverinfo </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="49" data-level="0 - Server Member" data-aliases="uinfo" data-values="$userinfo [user-mention] • $userinfo [user-id] • $userinfo [user-name] " data-examples="$serverinfo" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>userinfo</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                            Displays an user's information.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $userinfo <span class="code">&#x3C;user-mention&#x3E;</span>  </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="50" data-level="0 - Server Member" data-values="$strawpoll [question] | [choice1; choice2; choice3; ..] • $strawpoll -m [question] | [choice1; choice2; choice3; ..]" data-examples="$strawpoll Does 1 + 1 equal 2? | yes; no • $strawpoll -m What's your favorite color? | Red; Blue; Yellow;" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>strawpoll</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Create a strawpoll vote. Use the '-m' flag for multiple choice.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $strawpoll <span class="code">&#x3C;question&#x3E;</span> | <span class="code">&#x3C;choice1; choice2; ..&#x3E;</span> </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="box" data-id="51"data-level="0 - Server Member" data-values="$subscribe" data-examples="$subscribe" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>subscribe</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Subscribe to the server's announcements.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $subscribe</h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="box" data-id="52" data-level="0 - Server Member" data-values="$unsubscribe" data-examples="$unsubscribe" data-icon="toolbox">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-toolbox fa-2x"></i></div>
+
+                                <h4>unsubscribe</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                Unsubscribe from the server's announcements.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $unsubscribe </h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <!-- End utility content -->
 
@@ -1281,7 +1558,7 @@
         <div class="titlebar">
             <div class="circle blue small">
                 <i id="zoom-icon" class="fas fa-cogs fa-2x"></i>
-                <img id="zoom-tb-icon" style="display: none;" class="tb-tiny" src="https://i.nsylke.me/typicalbot.svg" />
+                <img id="zoom-tb-icon" style="display: none;" class="tb-tiny" src="https://typicalbot.com/x/typicalbot.svg" />
             </div>
             <h5 id="title"> Administrator role</h5>
             <i class="fas fa-angle-left fa-lg small-only"></i>
