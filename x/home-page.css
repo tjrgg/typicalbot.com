@@ -1,0 +1,133 @@
+#landing {
+    border-radius: .3rem;
+    padding: 10px;
+    background-color: white;
+    max-width: 80%;
+    text-align: center;
+    min-height: 90vh;
+    margin-top: 50px;
+}
+
+#landing .buttons {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Segoe UI'
+}
+
+#landing .buttons .button {
+    color: white;
+    background-color: #00adff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    transition: background-color .2s ease-in-out
+
+}
+
+#landing .buttons .button:hover {
+    background-color: #009be5;
+    cursor: pointer;
+}
+
+#landing .buttons a {
+    text-decoration: none
+}
+
+#landing {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+#landing img {
+    pointer-events: none
+}
+
+.top {
+    margin-top: -45px;
+}
+
+.center .title {
+    font-size: 80px;
+    color: #00adff;
+}
+
+.center {
+    margin-top: 25px;
+}
+
+.center .subtitle {
+    color: #707070
+}
+
+.center .subtitle:nth-of-type(1) {
+    margin-bottom: .1rem;
+}
+
+#landing a {
+    text-decoration: none !important
+}
+
+.big-button {
+    width: 450px;
+    font-size: 50px;
+    color: white !important;
+    background-color: #00adff;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
+    border-radius: 10px;
+    transition: background-color .2s ease-in-out
+
+}
+.big-button:hover {
+        background-color: #009be5;
+}
+
+.small-button {
+    display: block;
+    color: #00adff !important;
+    font-weight: 450;
+    font-size: 25px;
+    margin-top: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color .2s ease-in-out
+
+}
+.small-button:hover {
+        color: #009be5 !important;
+}
+
+.bottom .join-us {
+    margin-top: 50px;
+    color: #00adff;
+    display: flex;
+    width: 135px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: color .2s ease-in-out
+
+}
+
+.bottom .join-us i {
+    margin-right: 8px;
+    font-size: 23px;
+}
+.bottom .join-us:hover {
+        color: #009be5 !important;
+}
