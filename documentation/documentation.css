@@ -126,6 +126,13 @@ nav {
     transition: opacity .2s
 }
 
+.doc-category h5 {
+    color: #5e5e5e;
+    margin-top: 20px;
+    font-weight: lighter;
+    font-size: 1rem
+}
+
 #background .col-md-1 {
     margin-top: 40px;
 }
@@ -245,10 +252,21 @@ nav {
     margin-left: 11px;
 }
 
+#filters .col-lg-1 {
+    margin-right: 32px;
+}
+
 .doc-filter-button {
-width: 125px;
+    width: 125px;
     height: 100px;
     cursor: pointer
+}
+
+.doc-filter-button h5 {
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: 20px;
+    color: #5e5e5e
 }
 
 .doc-filter-button .filtercircle {
@@ -264,20 +282,22 @@ width: 125px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .fa-scroll {
-    margin-left:-3px;
+    margin-left: -3px;
 }
+
 .fa-book {
-    margin-left:1px;
+    margin-left: 1px;
 }
+
 .fa-user-ninja {
-    margin-left:1px;
+    margin-left: 1px;
 }
+
 .fa-microphone {
     margin-left: 2px;
 }
-
-
 
 .doc-filter-button.filtered .filtercircle {
     background-color: #B7B7B7;
@@ -312,9 +332,11 @@ width: 125px;
     margin-right: 12px;
     margin-left: 10px
 }
+
 .type-description .tiny-circle .fa-scroll {
-    margin-left:-1px;
+    margin-left: -1px;
 }
+
 .type-description .tiny-circle {
     border-radius: 50%;
     background-color: #00adff;
@@ -545,6 +567,7 @@ width: 125px;
     #filters .col-lg-1 {
         margin-left: 40px;
     }
+
     #filter-box {
         border: none;
     }
@@ -582,6 +605,7 @@ width: 125px;
         margin-right: 2px;
         width: 100%;
     }
+
     .tab-content .row {
         display: block
     }
