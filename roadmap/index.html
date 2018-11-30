@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://typicalbot.com/">
+    <meta property="og:title" content="TypicalBot – The Ultimate Discord Bot">
+    <meta property="og:description" content="Built upon over a year of experience, TypicalBot is the ironically-named bot that is far from typical.">
+    <meta property="og:site_name" content="TypicalBot">
+    <meta property="og:image" content="https://typicalbot.com/x/images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/x/style.css">
+    <link rel="stylesheet" href="/roadmap/roadmap.css">
+    <link rel="stylesheet" href="/documentation/documentation.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-POYwD7xcktv3gUeZO5s/9nUbRJG/WOmV6jfEGikMJu77LGYO8Rfs2X7URG822aum" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Roadmap – TypicalBot</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="content">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/documentation">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/roadmap">Roadmap</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/invite">Add TypicalBot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/join-us">Join the Server</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/donate">Donate</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="background">
+
+        <!-- Desktop icons -->
+        <div class="row" id="icons">
+            <div class="offset-lg-1"></div>
+            <div class="offset-lg-1"></div>
+            <div class="offset-lg-1"></div>
+            <div class="col-lg-1">
+                <div id="c1_toggle" class="doc-category" onclick="change('c1')">
+                    <div class="circle centered blue"><i class="fas fa-play fa-2x"></i></div>
+                    <h5>Category</h5>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div id="c2_toggle" class="doc-category" onclick="change('c2')">
+                    <div class="circle centered blue"><i class="fas fa-play fa-2x"></i></div>
+                    <h5>Category</h5>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div id="c3_toggle" class="doc-category" onclick="change('c3')">
+                    <div class="circle centered blue"><i class="fas fa-play fa-2x"></i></div>
+                    <h5>Category</h5>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div id="c4_toggle" class="doc-category" onclick="change('c4')">
+                    <div class="circle centered blue"><i class="fas fa-play fa-2x"></i></div>
+                    <h5>Category</h5>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div id="c5_toggle" class="doc-category" onclick="change('c5')">
+                    <div class="circle centered blue"><i class="fas fa-play fa-2x"></i></div>
+                    <h5>Category</h5>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div id="c6_toggle" class="doc-category" onclick="change('c6')">
+                    <div class="circle centered blue"><i class="fas fa-play fa-2x"></i></div>
+                    <h5>Category</h5>
+                </div>
+            </div>
+
+        </div>
+        <!-- end Desktop icons -->
+
+        <div class="divider"> </div>
+        <div class="tab-content">
+
+            <!-- c1 content -->
+            <div id="c1_tab" role="tabpanel" class="tab-pane" aria-labelledby="c1_tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th id="line-header">Line</th>
+                            <th>Status</th>
+                            <th>Expected release</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thing to do</td>
+
+                            <td class="line-container">
+                                <div class="line state-1"></div>
+                            </td>
+                            <td>Completed</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-2"></div>
+                            </td>
+                            <td>In progress</td>
+                            <td>January 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-3"></div>
+                            </td>
+                            <td>Started</td>
+                            <td>February 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line"></div>
+                            </td>
+                            <td>Starting soon</td>
+                            <td>March 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- End c1 content -->
+
+            <!-- c2 content -->
+            <div id="c2_tab" role="tabpanel" class="tab-pane" aria-labelledby="c2_tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th id="line-header">Line</th>
+                            <th>Status</th>
+                            <th>Expected release</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thing to do</td>
+
+                            <td class="line-container">
+                                <div class="line state-1"></div>
+                            </td>
+                            <td>Completed</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-2"></div>
+                            </td>
+                            <td>In progress</td>
+                            <td>January 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-3"></div>
+                            </td>
+                            <td>Started</td>
+                            <td>February 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line"></div>
+                            </td>
+                            <td>Starting soon</td>
+                            <td>March 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- End c2 content -->
+
+            <!-- c3 content -->
+            <div id="c3_tab" role="tabpanel" class="tab-pane" aria-labelledby="c3_tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th id="line-header">Line</th>
+                            <th>Status</th>
+                            <th>Expected release</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thing to do</td>
+
+                            <td class="line-container">
+                                <div class="line state-1"></div>
+                            </td>
+                            <td>Completed</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-2"></div>
+                            </td>
+                            <td>In progress</td>
+                            <td>January 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-3"></div>
+                            </td>
+                            <td>Started</td>
+                            <td>February 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line"></div>
+                            </td>
+                            <td>Starting soon</td>
+                            <td>March 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End c3 content -->
+
+            <!-- c4 content -->
+            <div id="c4_tab" role="tabpanel" class="tab-pane" aria-labelledby="c4_tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th id="line-header">Line</th>
+                            <th>Status</th>
+                            <th>Expected release</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thing to do</td>
+
+                            <td class="line-container">
+                                <div class="line state-1"></div>
+                            </td>
+                            <td>Completed</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-2"></div>
+                            </td>
+                            <td>In progress</td>
+                            <td>January 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-3"></div>
+                            </td>
+                            <td>Started</td>
+                            <td>February 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line"></div>
+                            </td>
+                            <td>Starting soon</td>
+                            <td>March 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End c4 content -->
+
+            <!-- c5 content -->
+            <div id="c5_tab" role="tabpanel" class="tab-pane" aria-labelledby="c5_tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th id="line-header">Line</th>
+                            <th>Status</th>
+                            <th>Expected release</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thing to do</td>
+
+                            <td class="line-container">
+                                <div class="line state-1"></div>
+                            </td>
+                            <td>Completed</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-2"></div>
+                            </td>
+                            <td>In progress</td>
+                            <td>January 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-3"></div>
+                            </td>
+                            <td>Started</td>
+                            <td>February 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line"></div>
+                            </td>
+                            <td>Starting soon</td>
+                            <td>March 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End c5 content -->
+
+            <!-- c6 content -->
+            <div id="c6_tab" role="tabpanel" class="tab-pane" aria-labelledby="c6_tab">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th id="line-header">Line</th>
+                            <th>Status</th>
+                            <th>Expected release</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thing to do</td>
+
+                            <td class="line-container">
+                                <div class="line state-1"></div>
+                            </td>
+                            <td>Completed</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-2"></div>
+                            </td>
+                            <td>In progress</td>
+                            <td>January 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line state-3"></div>
+                            </td>
+                            <td>Started</td>
+                            <td>February 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Thing to do</td>
+                            <td class="line-container">
+                                <div class="line"></div>
+                            </td>
+                            <td>Starting soon</td>
+                            <td>March 2019</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End c6 content -->
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        var ready = true
+        var current = "c1"
+        $(() => {
+            if (window.location.hash) {
+                if ($(`${window.location.hash}_toggle`).length > 0) {
+                    $(`${window.location.hash}_toggle`).addClass("selected")
+                    $(`${window.location.hash}_tab`).show()
+                    current = window.location.hash.replace("#", "")
+                } else {
+                    $("#c1_toggle").addClass("selected")
+                    $("#c1_tab").show()
+                }
+            } else {
+                $("#c1_toggle").addClass("selected")
+                $("#c1_tab").show()
+            }
+
+            $("td:empty").append("<i style=\"opacity: 0.5;\" class=\"fa fa-times\"></i>")
+            $(function() {
+                $('[data-toggle="popover"]').popover({
+                    html: true
+                })
+            })
+            $(".fas.fa-info-circle.fa-lg.small-only").click(function(e) {
+                try {
+                    var box = $($($(this).parent()).parent())
+                    var id = box.attr("data-id")
+                    if (!id) {
+                        blur()
+                    } else {
+                        blur(id)
+                    }
+
+                } catch (e) {
+                    console.log(e)
+                }
+
+            })
+            $(".highlight.right").click(function(e) {
+                try {
+                    var box = $($(this).parent())
+                    var id = box.attr("data-id")
+                    if (!id) {
+                        blur()
+                    } else {
+                        blur(id)
+                    }
+
+                } catch (e) {
+                    console.log(e)
+                }
+
+            })
+            $(".doc-filter-button").click(function() {
+                var e = $(this)
+                if (e.hasClass("filtered")) {
+                    e.removeClass("filtered")
+                    $(`[data-type="${e.attr("data-name")}"]`).parent().removeClass("filtered")
+                } else {
+                    e.addClass("filtered")
+                    $(`[data-type="${e.attr("data-name")}"]`).parent().addClass("filtered")
+                }
+            })
+        })
+
+        function change(id) {
+            if (!ready) {
+                return
+            }
+            $(".selected").removeClass("selected")
+            $("#" + id + "_toggle").addClass("selected")
+            $("#" + current + "_tab").hide()
+            $("#" + id + "_tab").show()
+            current = id
+            window.location.hash = `#${id}`
+        }
+
+        function blur(id) {
+            window.scrollTo(0, 0)
+            $(".blurred").addClass("active")
+            $("#background").addClass("blurred")
+            $(".zoom").addClass("active")
+            if (id) {
+                var x = $('[data-id="' + id + '"]')
+                var level = x.attr("data-level")
+                var values = x.attr("data-values")
+                var icon = x.attr("data-icon")
+                var aliases = x.attr("data-aliases")
+                var examples = x.attr("data-examples")
+                var description = x.children("h5").text().trim()
+                var title = x.children("div").children("h4").text().trim()
+                values = values.split("•")
+                values = values.map(clean)
+                examples = examples.split("•")
+                examples = examples.map(clean)
+
+                console.log(level)
+                console.log(values)
+                console.log(examples)
+                console.log(description)
+                console.log(title)
+                if (icon == "cogs") {
+                    $("#cmdname").text("Setting name")
+                    $("#values-title").text("Values")
+                    $("#name").text(x.attr("data-name"))
+                } else {
+                    $("#cmdname").text("Command name")
+                    $("#name").text(title)
+                    $("#values-title").text("Usage")
+                }
+                if (aliases) {
+                    aliases = aliases.split("•")
+                    aliases = aliases.map(clean)
+                    $("#aliases").html(aliases.join("\n"))
+                    $("#aliases-box").show()
+                } else {
+                    $("#aliases-box").hide()
+
+                }
+                $("#level").text(level)
+                $("#title").text(title)
+                $("#description").text(description)
+                $("#values").html(values.join("\n"))
+                $("#examples").html(examples.join("\n"))
+                $("#zoom-icon").removeClass("fa-cogs")
+                $("#zoom-icon").addClass("fa-" + icon)
+                if (icon == "tb") {
+                    $("#zoom-tb-icon").show()
+                    $("#zoom-icon").hide()
+                } else {
+                    $("#zoom-tb-icon").hide()
+                    $("#zoom-icon").show()
+                }
+
+            }
+        }
+
+        function clean(data) {
+            data = "<h5>" + data + "</h5>"
+            data = data.replace(/\!prime\!/, "<span class=\"badge badge-success\">TypicalBot Prime Feature</span>")
+            data = data.replace(/\[/gim, "<span class=\"code\">&#x3C;")
+            data = data.replace(/\]/gim, "&#x3E;</span>")
+            return data
+        }
+
+        function disableBlur() {
+            $(".blurred").removeClass("active")
+            $("#background").removeClass("blurred")
+            $(".zoom").removeClass("active")
+
+
+        }
+    </script>
+    </div>
+    <div class="blurred" onclick="disableBlur()"></div>
+    <div class="zoom">
+        <div class="titlebar">
+            <div class="circle blue small">
+                <i id="zoom-icon" class="fas fa-cogs fa-2x"></i>
+                <img id="zoom-tb-icon" style="display: none;" class="tb-tiny" src="https://typicalbot.com/x/typicalbot.svg" />
+            </div>
+            <h5 id="title"> Administrator role</h5>
+            <i class="fas fa-angle-left fa-lg small-only"></i>
+        </div>
+        <div class="divider"></div>
+        <div class="description">
+            <h6 id="description"> Administrator role that will grant users with the role(s) permission level 3. </h6>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4 id="cmdname">Command name</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div>
+                        <h5 id="name">adminrole</h5>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4 id="values-title">Values</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div id="values">
+                        <h5>disable</h5>
+                        <h5><span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>add <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>remove <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>clear</h5>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4>level required</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div>
+                        <h5 id="level">3+ </h5>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row" id="aliases-box">
+                <div class="col">
+                    <div>
+                        <h4>Aliases</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div id="aliases">
+                        <h5>$set edit adminrole disable</h5>
+                        <h5>$set edit adminrole <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole add <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole remove <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole clear</h5>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h4>Examples</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div id="examples">
+                        <h5>$set edit adminrole disable</h5>
+                        <h5>$set edit adminrole <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole add <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole remove <span class="code">&#x3C;role-name|role-id|role-mention&#x3E;</span></h5>
+                        <h5>$set edit adminrole clear</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button class="return_button" onclick="disableBlur()">Go back</button>
+    </div>
+
+
+
+</body>
+
+
+</html>
