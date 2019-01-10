@@ -61,6 +61,15 @@
         <!-- Desktop icons -->
         <div class="row justify-content-md-center" id="icons">
             <div class="col-lg-1">
+                <div id="c9_toggle" class="doc-category" onclick="change('c9')">
+                    <div class="circle centered blue">
+                        <i class="fas fa-fire" style="transform: rotate(-130deg) translate(-9px,-2px)"></i>
+                        <i class="far fa-rocket fa-2x" style="transform: translate(-5px, -2px);"></i>
+                    </div>
+                    <h5>Intro</h5>
+                </div>
+            </div>
+            <div class="col-lg-1">
                 <div id="c1_toggle" class="doc-category" onclick="change('c1')">
                     <div class="circle centered blue"><img class="tb-small" src="https://typicalbot.com/x/images/icon.png" /></div>
                     <h5>Core</h5>
@@ -1033,6 +1042,21 @@
                 <h5 class="text-center" style="color: #707070;margin-top: 20px;">Have some ideas? Join<a style="color: #00ADFF" href="/join-us"> our Discord server</a> to suggest them!</h5>
             </div>
             <!-- End c8 content -->
+
+            <!-- c9 content -->
+            <div id="c9_tab" role="tabpanel" class="tab-pane" aria-labelledby="c9_tab">
+
+                <h1 class="text-center">Roadmap TypicalBot version 3</h1>
+                <h5 class="" style="margin: 50px 40px;">The TypicalBot team is currently working on a new version of TypicalBot, which includes a lot of big changes.<br>
+                    It includes a lot of technical changes improving stability and quality of TypicalBot.
+                    <br><br>
+                    In this update TypicalBot will now be open source, which means more people can contribute for faster
+                    development.
+                    <br><br>
+                    Click on any of the categories on the top to see some expected release dates for certain features, and the progress that has been made.</h5>
+                    <br>
+            </div>
+            <!-- End c9 content -->
         </div>
 
 
@@ -1042,7 +1066,7 @@
 
     <script>
         var ready = true
-        var current = "c1"
+        var current = "c9"
         $(() => {
             if (window.location.hash) {
                 if ($(`${window.location.hash}_toggle`).length > 0) {
@@ -1050,12 +1074,12 @@
                     $(`${window.location.hash}_tab`).show()
                     current = window.location.hash.replace("#", "")
                 } else {
-                    $("#c1_toggle").addClass("selected")
-                    $("#c1_tab").show()
+                    $("#c9_toggle").addClass("selected")
+                    $("#c9_tab").show()
                 }
             } else {
-                $("#c1_toggle").addClass("selected")
-                $("#c1_tab").show()
+                $("#c9_toggle").addClass("selected")
+                $("#c9_tab").show()
             }
 
             $("td:empty").append("<i style=\"opacity: 0.5;\" class=\"fa fa-times\"></i>")
