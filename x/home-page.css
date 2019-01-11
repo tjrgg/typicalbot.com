@@ -23,7 +23,7 @@
 
 .button {
     color: white;
-    background-color: #00adff;
+    background-color: #1976D2;
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -58,7 +58,7 @@
 
 .center .title {
     font-size: 80px;
-    color: #00adff;
+    color: #1976D2;
 }
 
 .center {
@@ -81,7 +81,7 @@
     width: 450px;
     font-size: 50px;
     color: white !important;
-    background-color: #00adff;
+    background-color: #1976D2;
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -97,7 +97,7 @@
 
 .small-button {
     display: block;
-    color: #00adff !important;
+    color: #1976D2 !important;
     font-weight: 450;
     font-size: 25px;
     margin-top: 20px;
@@ -113,7 +113,7 @@
 
 .bottom .join-us {
     margin-top: 50px;
-    color: #00adff;
+    color: #1976D2;
     display: flex;
     width: 135px;
     flex-direction: row;

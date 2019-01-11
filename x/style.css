@@ -3,7 +3,7 @@ body {
 }
 
 .navbar {
-    background-color: #00adff;
+    background-color: #1976D2;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -70,7 +70,7 @@ span[id="right"] li {
     display: inline-block;
 }
 code[class="input"] {
-    color: #00adff;
+    color: #1976D2;
     font-style: italic;
 }
 code[class="mention"] {
@@ -80,7 +80,7 @@ code[class="mention"] {
     font-family: Whitney, Helvetica Neue, Helvetica,Arial, sans-serif;
 }
 .docs .nav-link {
-    color: #00adff;
+    color: #1976D2;
 }
 .docs .tab-note {
     font-size: 14px;
