@@ -1,10 +1,11 @@
-<h2 align="center">TypicalBot</h2>
-
+<h1 align="center">TypicalBot</h1>
 <p align="center">
-	<a href="https://discord.gg/typicalbot"><img src="https://img.shields.io/badge/chat-on%20discord-blue.svg?style=for-the-badge"><a>
-	<a href="https://github.com/typicalbot/typicalbot.com/issues"><img src="https://img.shields.io/github/issues/typicalbot/typicalbot.com.svg?style=for-the-badge"></a>
-	<a href="https://github.com/typicalbot/typicalbot.com/blob/master/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/code-of%20conduct-ff69b4.svg?style=for-the-badge"></a>
+	<a href="https://typicalbot.com"><img src="https://img.shields.io/badge/website-typicalbot.com-brightgreen.svg"></a>
+	<a href="https://discord.gg/typicalbot"><img src="https://discordapp.com/api/guilds/163038706117115906/embed.png?style=shield"></a>
+	<a href="https://www.patreon.com/TypicalBot"><img src="https://img.shields.io/badge/donate-typicalbot-blue.svg"></a>
+	<a href="LICENSE.md"><img src="https://img.shields.io/github/license/typicalbot/typicalbot.com.svg"></a>
 </p>
+
 
 TypicalBot is a multi-threaded and high-performance Discord bot, using the [JDA library](https://github.com/DV8FromTheWorld/JDA).
 
