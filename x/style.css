@@ -37,7 +37,7 @@ nav ul .nav-link {
     transition: background 0.2s linear !important;
 }
 nav ul .nav-link:hover {
-    background-color: #1592cd;
+    background-color: #145ea7;
 }
 nav ul li img {
     border-radius: 100%;
