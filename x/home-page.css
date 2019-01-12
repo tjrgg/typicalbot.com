@@ -13,7 +13,7 @@
     -webkit-user-select: none;
 }
 
-#landing .buttons {
+.buttons {
     position: relative;
     top: 5px;
     left: 10px;
@@ -39,12 +39,12 @@
     display: none;
 }
 
-#landing .buttons .button:hover {
+.buttons .button:hover {
     background-color: #009be5;
     cursor: pointer;
 }
 
-#landing .buttons a {
+.buttons a {
     text-decoration: none
 }
 
@@ -111,11 +111,12 @@
     color: #009be5 !important;
 }
 
-.bottom .join-us {
+.join-us {
     margin-top: 50px;
     color: #1976D2;
     display: flex;
-    width: 135px;
+    width: 140px;
+    font-size: 16px;
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
@@ -123,12 +124,12 @@
     transition: color .2s ease-in-out
 }
 
-.bottom .join-us i {
+.join-us i {
     margin-right: 8px;
     font-size: 23px;
 }
 
-.bottom .join-us:hover {
+.join-us:hover {
     color: #009be5 !important;
 }
 
@@ -160,7 +161,7 @@
         display: none !important;
     }
 
-    .join-us {
+    #landing .join-us {
         display: none !important
     }
 
