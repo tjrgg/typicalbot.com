@@ -110,7 +110,7 @@ a {
 }
 
 #banner .big-button {
-    margin-top: 8px;
+    margin-top: 22px;
     width: 180px;
     font-size: 20px;
 }
@@ -172,6 +172,10 @@ a {
 
     #banner {
         max-width: 99%;
+        height: 254px !important;
+    }
+    #banner .big-buttons {
+        margin-top: 8px;
     }
 }
 
@@ -182,6 +186,7 @@ a {
 
     #banner {
         max-width: 98%;
+        height: 214px;
     }
 
     .top {
@@ -205,6 +210,7 @@ a {
         margin-left: auto;
         margin-right: auto;
     }
+
 }
 
 @media (min-width: 1000px) and (max-width: 1500px) {
@@ -213,6 +219,6 @@ a {
     }
 
     #banner {
-        max-width: 90% !important
+        max-width: 90% !important;
     }
 }
