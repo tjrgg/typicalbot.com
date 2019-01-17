@@ -13,6 +13,10 @@ body .grid-x:first-child {
 #small-nav .cell {
     height: 40px;
     margin-top: 21px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #menu_toggle {
@@ -37,6 +41,10 @@ body .grid-x:first-child {
     font-weight: lighter;
     margin-top: 10px;
     text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #nav-links a {
@@ -92,6 +100,8 @@ body .grid-x:first-child {
     user-select: none;
     font-size: 1.5rem;
     margin-left: 33px;
+    cursor: pointer;
+    display: inline;
 }
 
 #nav {
@@ -119,6 +129,10 @@ body .grid-x:first-child {
 
 #sidebar .title {
     margin-bottom: 45px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .item {
@@ -126,6 +140,10 @@ body .grid-x:first-child {
     display: flex;
     margin-bottom: 25px;
     transition: background-color .1s ease-in, color .1s ease-in;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #roadmap-menu-button {
