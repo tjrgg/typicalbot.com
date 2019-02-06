@@ -135,6 +135,19 @@ a {
     color: #009be5 !important;
 }
 
+.sponsors {
+    margin-top: 60px;
+}
+
+.sponsors img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sponsors h4 {
+    margin-bottom: 30px;
+}
+
 .bottom .join-us {
     margin-top: 50px;
     color: #1976D2;
