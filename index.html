@@ -1,121 +1,136 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://typicalbot.com/">
-    <meta property="og:title" content="TypicalBot – The Ultimate Discord Bot">
-    <meta property="og:description" content="Built upon over a year of experience, TypicalBot is the ironically-named bot that is far from typical.">
-    <meta property="og:site_name" content="TypicalBot">
-    <meta property="og:image" content="https://typicalbot.com/x/images/icon.png">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/x/style.css">
-    <link rel="stylesheet" href="/x/home-page.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-POYwD7xcktv3gUeZO5s/9nUbRJG/WOmV6jfEGikMJu77LGYO8Rfs2X7URG822aum" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-    <title>Home – TypicalBot</title>
+    <meta charset="UTF-8">
+    <title>TypicalBot &mdash; Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/browser.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="content">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/documentation">Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/roadmap">Roadmap</a>
-                </li>
+    <nav class="top">
+        <div class="wrap">
+            <div class="logo">TypicalBot</div>
+            <input type="checkbox" id="mobile">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Prime</a></li>
+                <li><a href="https://discord.gg/typicalbot">Community</a></li>
+                <li><a href="#">Documentation</a></li>
             </ul>
-            <ul class="navbar-nav my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="/invite">Add TypicalBot</a></li>
-                <li class="nav-item"><a class="nav-link" href="/join-us">Join the Server</a></li>
-                <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
-            </ul>
+            <label class="hamburger" for="mobile"><i class="fa fa-bars"></i></label>
         </div>
     </nav>
-
-    <div id="banner">
-        <div class="container">
-            <h5>The TypicalBot team is currently working on a new version of TypicalBot, which includes a lot of big changes.
-                It includes a lot of technical changes improving stability and quality of TypicalBot.</h5>
-            <h5>
-                Join our lounge to help us decide new features and changes.
-            </h5>
-
-            <a class="big-button" href="/invite">Join our server</a>
+    <section class="hero">
+        <div class="wrap center">
+            <h1 class="light">TypicalBot, far from typical.</h1>
         </div>
-    </div>
-
-    <div id="landing" class="content container">
-        <div class="buttons">
-            <a href="/join-us">
-                <div class="button">
-                    <i class="fab fa-discord"></i>
+        <div id="browser">
+            <header>
+                <div class="top">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://www.twitter.com/Typical_Bot">
-                <div class="button">
-                    <i class="fab fa-twitter"></i>
+                <div class="bar">
+                    <a href="#" class="back">back</a>
+                    <a href="#" class="forward">forward</a>
+                    <a href="#" class="reload">reload</a>
+                    <div class="address" style="background-image: url(img/secure.png);"><span class="secure">https</span><span class="gray">://</span><span>typicalbot.com/demo</span></div>
                 </div>
-            </a>
-            <a href="https://www.reddit.com/r/TypicalBot">
-                <div class="button">
-                    <i class="fab fa-reddit-alien"></i>
-                </div>
-            </a>
+            </header>
+            <iframe src="https://typicalbot.com" width="100%" height="100%" frameborder="0"></iframe>
         </div>
-        <div class="top">
-            <img src="https://typicalbot.com/x/typicalbot.svg" height="250px" width="250px">
-
+    </section>
+    <section class="features">
+        <div class="wrap">
+            <ul class="columns">
+                <li class="col-2">
+                    <h4><i class="fa fa-users"></i><span>Title</span></h4>
+                    <p class="subtitle light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam suscipit dolore illo quia aspernatur itaque, blanditiis optio. Molestias cum veritatis ratione eaque possimus quae necessitatibus vel error, nesciunt modi, eum.</p>
+                    <a href="#" class="button blue-line">Read more</a>
+                </li>
+                <li class="col-2">
+                    <h4><i class="fa fa-users"></i><span>Title</span></h4>
+                    <p class="subtitle light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam suscipit dolore illo quia aspernatur itaque, blanditiis optio. Molestias cum veritatis ratione eaque possimus quae necessitatibus vel error, nesciunt modi, eum.</p>
+                    <a href="#" class="button blue-line">Read more</a>
+                </li>
+            </ul>
+            <ul class="columns">
+                <li class="col-2">
+                    <h4><i class="fa fa-users"></i><span>Title</span></h4>
+                    <p class="subtitle light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam suscipit dolore illo quia aspernatur itaque, blanditiis optio. Molestias cum veritatis ratione eaque possimus quae necessitatibus vel error, nesciunt modi, eum.</p>
+                    <a href="#" class="button blue-line">Read more</a>
+                </li>
+                <li class="col-2">
+                    <h4><i class="fa fa-users"></i><span>Title</span></h4>
+                    <p class="subtitle light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam suscipit dolore illo quia aspernatur itaque, blanditiis optio. Molestias cum veritatis ratione eaque possimus quae necessitatibus vel error, nesciunt modi, eum.</p>
+                    <a href="#" class="button blue-line">Read more</a>
+                </li>
+            </ul>
         </div>
-        <div class="center">
-            <h1 class="title">TypicalBot</h1>
-            <h2 class="subtitle">Built upon over a year of experience, </h2>
-            <h2 class="subtitle">TypicalBot is the ironically-named bot that is far from typical.</h2>
-            <a class="big-button" href="/invite">Add TypicalBot</a>
-            <a class="small-button" href="/documentation">View Documentation </a>
+    </section>
+    <section class="statistics">
+        <div class="wrap">
+            <ul class="columns text-center">
+                <li class="col-2">
+                    <h4>30,000+</h4>
+                    <p class="subtitle light">Commands used per day</p>
+                </li>
+                <li class="col-2">
+                    <h4>20+</h4>
+                    <p class="subtitle light">Concurrent voice connections</p>
+                </li>
+            </ul>
+            <ul class="columns text-center">
+                <li class="col-3">
+                    <h4>58,000+</h4>
+                    <p class="subtitle light">Guilds</p>
+                </li>
+                <li class="col-3">
+                    <h4>1,000,000+</h4>
+                    <p class="subtitle light">Channels</p>
+                </li>
+                <li class="col-3">
+                    <h4>2,000,000+</h4>
+                    <p class="subtitle light">Users</p>
+                </li>
+            </ul>
         </div>
-        <div class="bottom">
-            <div class="join-us" onclick="window.location = '/join-us'">
-                <i class="fab fa-discord"></i>
-                <p>Join Our Server</p>
+    </section>
+    <footer class="footer">
+        <div class="wrap">
+            <ul>
+                <li>TypicalBot</li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Prime</a></li>
+                <li><a href="https://discord.gg/typicalbot">Community</a></li>
+            </ul>
+            <ul>
+                <li>Developers</li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">API</a></li>
+            </ul>
+            <ul>
+                <li>Support</li>
+                <li><a href="mailto:support@typicalbot.com">Contact</a></li>
+            </ul>
+            <ul>
+                <li>Legal</li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+            <div class="copyright">
+                <div class="logo">TypicalBot</div>
+                <p>Copyright &copy; 2019 TypicalBot</p>
             </div>
-            <div class="mobile-buttons">
-                <a href="/join-us">
-                    <div class="button">
-                        <i class="fab fa-discord"></i>
-                    </div>
-                </a>
-                <a href="https://www.twitter.com/Typical_Bot">
-                    <div class="button">
-                        <i class="fab fa-twitter"></i>
-                    </div>
-                </a>
-                <a href="https://www.reddit.com/r/TypicalBot">
-                    <div class="button">
-                        <i class="fab fa-reddit-alien"></i>
-                    </div>
-                </a>
-                <a href="https://discordbots.org/bot/153613756348366849" style="right: 0;margin-right: 40px;margin-left: auto;">
-                    <img src="https://discordbots.org/api/widget/status/153613756348366849.png?noavatar=true&amp;lefttextcolor=fff&amp;righttextcolor=fff">
-                </a>
-            </div>
         </div>
-
-    </div>
+    </footer>
+    <script src="js/smoothscroll.min.js" rel="script" type="text/javascript" defer></script>
 </body>
-
 </html>
