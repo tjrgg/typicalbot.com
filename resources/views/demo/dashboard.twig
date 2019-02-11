@@ -1,0 +1,147 @@
+{% extends '_layouts/demo.twig' %}
+
+{% block content %}
+	<div id="page" class="fluid">
+		<input type="checkbox" id="menu" class="hidden">
+		<div class="side-bar">
+			<header class="side-bar-header">
+				<a href="#" class="logo">TypicalBot</a>
+			</header>
+			<div class="user-info-wrap">
+				<figure class="profile-image">
+					<img src="img/avatar.png" width="65px" height="65px">
+				</figure>
+				<div class="info">
+					<span class="greeting">Welcome</span>
+					<span class="name">Guest</span>
+				</div>
+			</div>
+			<div class="wrap scroll">
+				<p class="menu-title">Browse</p>
+				<ul class="menu">
+					<li class="active">
+						<a href="#">
+							<span class="fa fa-tachometer-alt"></span>
+							<span class="title">Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-cube"></span>
+							<span class="title">Modules</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-exchange-alt"></span>
+							<span class="title">Webhooks</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-terminal"></span>
+							<span class="title">Languages</span>
+						</a>
+					</li>
+					<li class="sub-menu">
+						<input type="checkbox" id="menu_analytics" class="hidden">
+						<label for="menu_analytics">
+							<span class="fa fa-chart-line"></span>
+							<span class="title">Analytics</span>
+						</label>
+						<ul data-tip="2">
+							<li><a href="#">Overview</a></li>
+							<li><a href="#">Real time</a></li>
+						</ul>
+					</li>
+				</ul>
+				<p class="menu-title">Account</p>
+				<ul class="menu">
+					<li>
+						<a href="#">
+							<span class="fa fa-user"></span>
+							<span class="title">Account</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-cog"></span>
+							<span class="title">Settings</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-power-off"></span>
+							<span class="title">Logout</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<nav class="container-navigation">
+				<ul class="quick-options">
+					<li class="hamburger">
+						<label for="menu">
+							<i class="fa fa-bars"></i>
+						</label>
+					</li>
+					<li id="search">
+						<div class="input-group prepend">
+							<i class="fa fa-search"></i>
+							<input type="text" placeholder="Search...">
+						</div>
+					</li>
+				</ul>
+				<ul class="quick-options profile-options">
+					<li class="menu_stand_out">
+						<label for="settings">
+							<i class="fa fa-user"></i>
+						</label>
+						<input type="checkbox" id="settings" class="hidden toggle_menu"/>
+						<ul class="drop_menu">
+							<li>
+								<a href="#">
+									<i class="fa fa-user"></i>
+									<span>Account</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-cog"></i>
+									<span>Settings</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="#">
+									<i class="fa fa-power-off"></i>
+									<span>Logout</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-power-off"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="container-wrap">
+				<div class="row">
+					<div class="block fluid">
+						<section>
+							<header class="grid-title no-border">
+								<h4>Guilds</h4>
+							</header>
+							<div class="grid-body">
+								<p>Below we've displayed a list of guilds that you are in. Please choose which one you would like to manage.</p>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
