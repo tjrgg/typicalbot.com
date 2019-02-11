@@ -208,6 +208,18 @@ nav.top .hamburger {
 	margin: 40px 0;
 }
 
+.get-started {
+	padding: 150px 0;
+}
+
+.get-started .links {
+	margin-top: 10px;
+}
+
+.get-started .links a:last-child {
+	margin: 10px 15px 0 10px;
+}
+
 .footer {
 	background: #1976D2;
 	min-height: 148px;
