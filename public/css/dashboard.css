@@ -184,6 +184,7 @@ body {
 .side-bar .menu li.sub-menu > a:after, .side-bar .menu li label:after {
 	font-family: "Font Awesome 5 Free";
 	font-size: 10px;
+	font-weight: 900;
 	content: "\f107";
 	display: block;
 	top: 15px;
