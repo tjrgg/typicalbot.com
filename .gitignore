@@ -1,2 +1,3 @@
-*.php
-*.txt
+/vendor
+/cgi-bin
+composer.lock
