@@ -145,11 +145,11 @@ nav.top .hamburger {
 }
 
 .button.blue {
-    background-color: #1976D2;
+    background-color: #166abd;
 }
 
 .button.blue:hover {
-    background-color: #166abd;
+    background-color: #145ea8;
 }
 
 .button.blue-line {
@@ -432,7 +432,7 @@ nav.top .hamburger {
     }
 
     nav.top ul li .button {
-        color: inherit !important;
+        color: #d4d7d8 !important;
         padding: 0;
     }
 
