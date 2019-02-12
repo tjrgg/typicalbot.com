@@ -111,9 +111,9 @@ body {
 .hamburger {
 	font-size: 24px;
 	color: #fff;
-	right: 32px;
-	top: 33px;
-	position: fixed;
+	right: 0px;
+	top: 4px;
+	position: absolute;
 	cursor: pointer;
 	display: none;
 }
