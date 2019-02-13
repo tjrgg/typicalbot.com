@@ -188,19 +188,21 @@ body {
 }
 
 .features {
+	font-family: 'Open Sans';
 	padding: 30px 0 42px 0;
 }
 
-.features .columns {
+.features .row {
 	margin: 80px 0;
 }
 
 .statistics {
+	font-family: 'Open Sans';
 	background-color: #E8ECEF;
 	padding: 30px 0 42px 0;
 }
 
-.statistics .columns {
+.statistics .row {
 	margin: 40px 0;
 }
 
@@ -267,49 +269,87 @@ body {
 	padding-top: 8px;
 }
 
-.columns {
-	font-family: 'Open Sans';
-}
-
-.columns [class*="col-"] {
+.col {
+	display: block;
 	float: left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child {
+	margin-left: 0;
+}
+
+.row:before, .row:after {
+	content: '';
+	display: table;
+}
+
+.row:after {
+	clear: both;
+}
+
+.col-1 {
+	width: 6.866%;
+}
+
+.col-2 {
+	width: 15.33%;
+}
+
+.col-3 {
+	width: 23.8%;
+}
+
+.col-4 {
+	width: 32.26%;
+}
+
+.col-5 {
+	width: 40.73%;
+}
+
+.col-6 {
+	width: 49.2%;
+}
+
+.col-7 {
+	width: 57.66%;
+}
+
+.col-8 {
+	width: 66.13%;
+}
+
+.col-9 {
+	width: 74.6%;
+}
+
+.col-10 {
+	width: 83.06%;
+}
+
+.col-11 {
+	width: 91.53%;
+}
+
+.col-12 {
 	width: 100%;
-	margin-right: 60px;
 }
 
-.columns [class*="col-"]:last-child {
-	margin-right: 0;
-}
-
-.columns [class*="col-"] h4 {
-	margin-bottom: 8px;
+[class*="col-"] h4 {
+	margin-bottom: 4px;
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 1.8;
 	color: #15181D;
-	width: inherit;
 }
 
-.columns [class*="col-"] h4 i {
+[class*="col-"] h4 i {
 	margin-right: 5px;
 }
 
-.columns [class*="col-"] .subtitle {
+[class*="col-"] .subtitle {
 	margin-bottom: 20px;
-}
-
-.columns .col-2 {
-	width: 480px;
-}
-
-.columns .col-3 {
-	width: 300px;
-}
-
-.columns:after {
-	display: table;
-	clear: both;
-	content: '';
 }
 
 .subtitle {
@@ -335,15 +375,15 @@ body {
 }
 
 @media screen and (max-width: 1120px) {
-	.columns:first-child {
+	.row:first-child {
 		margin-bottom: 0;
 	}
 
-	.columns:last-child {
+	.row:last-child {
         margin-top: 0;
     }
 
-    .columns [class*="col-"] {
+    .row [class*="col-"] {
         float: none;
         margin: 40px auto !important;
         text-align: center;
@@ -475,18 +515,8 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
-	.features .columns {
-        padding: 0 30px;
-    }
-
-    .columns .col-2 {
-        width: 408px;
-    }
-}
-
 @media screen and (max-width: 500px) {
-    .columns [class*="col-"] h4 {
+    .row [class*="col-"] h4 {
         font-size: 20px;
     }
 
