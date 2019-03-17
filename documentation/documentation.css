@@ -358,6 +358,7 @@ nav {
 .searchBar input {
     border: none;
     border-bottom-color: white;
+    font-size: 1.4em;
 }
 
 .searchBar input:focus {
