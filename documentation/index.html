@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="/documentation/string-similarity.js"></script>
     <title>Documentation – TypicalBot</title>
 </head>
 
@@ -122,10 +123,18 @@
             </div>
         </div>
         <!-- end Desktop icons -->
-
         <div class="divider"> </div>
+        <div class="searchBar">
+            <i class="far fa-search fa-flip-horizontal"></i>
+            <input id="searchBar" type="text" placeholder="Type to search">
+        </div>
         <div class="tab-content">
 
+            <!-- Search Page content -->
+            <div id="search_tab" role="tabpanel" class="tab-pane" aria-labelledby="search_tab">
+                <!-- Items will be dynamically loaded -->
+            </div>
+            <!-- End search page content -->
             <!-- Quick start content -->
             <div id="qs_tab" role="tabpanel" class="tab-pane" aria-labelledby="qs_tab">
                 <div class="row">
@@ -1884,26 +1893,26 @@
                     <h1> Filter settings </h1>
                     <div class="row" id="filters">
                         <div class="col-lg-1" style="margin-left: 10px;">
-                            <div class="doc-filter-button" data-name="general" >
-                                <div class="filtercircle" ><i class="fas fa-wrench fa-2x"></i></div>
+                            <div class="doc-filter-button" data-name="general">
+                                <div class="filtercircle"><i class="fas fa-wrench fa-2x"></i></div>
                                 <h5>GENERAL</h5>
                             </div>
                         </div>
                         <div class="col-lg-1">
-                            <div class="doc-filter-button" data-name="announcements" >
-                                <div class="filtercircle" ><i class="fas fa-microphone fa-2x"></i></div>
+                            <div class="doc-filter-button" data-name="announcements">
+                                <div class="filtercircle"><i class="fas fa-microphone fa-2x"></i></div>
                                 <h5 style="margin-left: -5px;">ANNOUNCEMENTS</h5>
                             </div>
                         </div>
                         <div class="col-lg-1">
-                            <div id="filter_1" class="doc-filter-button" data-name="permission" >
-                                <div class="filtercircle" ><i class="fas fa-lock fa-2x"></i></div>
+                            <div id="filter_1" class="doc-filter-button" data-name="permission">
+                                <div class="filtercircle"><i class="fas fa-lock fa-2x"></i></div>
                                 <h5>PERMISSIONS</h5>
                             </div>
                         </div>
                         <div class="col-lg-1">
                             <div id="filter_2" class="doc-filter-button" data-name="roles">
-                                <div class="filtercircle" ><i class="fas fa-scroll fa-2x"></i></div>
+                                <div class="filtercircle"><i class="fas fa-scroll fa-2x"></i></div>
                                 <h5>ROLES</h5>
                             </div>
                         </div>
@@ -1915,13 +1924,13 @@
                         </div>
                         <div class="col-lg-1">
                             <div id="filter_4" class="doc-filter-button" data-name="anti-invite">
-                                <div class="filtercircle" ><i class="fas fa-flag fa-2x"></i></div>
+                                <div class="filtercircle"><i class="fas fa-flag fa-2x"></i></div>
                                 <h5>ANTI-INVITE</h5>
                             </div>
                         </div>
                         <div class="col-lg-1">
                             <div id="filter_5" class="doc-filter-button" data-name="music">
-                                <div class="filtercircle" ><i class="fas fa-music fa-2x"></i></div>
+                                <div class="filtercircle"><i class="fas fa-music fa-2x"></i></div>
                                 <h5>MUSIC</h5>
                             </div>
                         </div>
@@ -1951,7 +1960,7 @@
                             </div>
                             <div class="divider"></div>
                             <h5>
-                             	Embed responses from TypicalBot.
+                                Embed responses from TypicalBot.
                             </h5>
                             <div class="highlight left">
                                 <i class="far fa-angle-double-right fa-lg"></i>
@@ -1965,7 +1974,8 @@
                     </div>
 
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="72" data-level="3 - Server Administrator" data-name="adminrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear" data-examples="$settings edit adminrole Administrators • $settings edit adminrole add Administrators • $settings edit adminrole remove Administrators  • $settings edit adminrole clear" data-icon="cogs">
+                        <div class="box" data-id="72" data-level="3 - Server Administrator" data-name="adminrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear"
+                            data-examples="$settings edit adminrole Administrators • $settings edit adminrole add Administrators • $settings edit adminrole remove Administrators  • $settings edit adminrole clear" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
@@ -1993,7 +2003,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="73" data-level="3 - Server Administrator" data-name="modrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear" data-examples="$settings edit modrole Moderators • $settings edit modrole add Moderators • $settings edit modrole remove Moderators  • $settings edit modrole clear" data-icon="cogs">
+                        <div class="box" data-id="73" data-level="3 - Server Administrator" data-name="modrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear"
+                            data-examples="$settings edit modrole Moderators • $settings edit modrole add Moderators • $settings edit modrole remove Moderators  • $settings edit modrole clear" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
@@ -2021,7 +2032,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="73" data-level="3 - Server Administrator" data-name="djrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear" data-examples="$settings edit djrole Djs • $settings edit djrole add Djs • $settings edit djrole remove Djs  • $settings edit djrole clear" data-icon="cogs">
+                        <div class="box" data-id="73" data-level="3 - Server Administrator" data-name="djrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear"
+                            data-examples="$settings edit djrole Djs • $settings edit djrole add Djs • $settings edit djrole remove Djs  • $settings edit djrole clear" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
@@ -2049,7 +2061,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="74" data-level="3 - Server Administrator" data-name="blacklistrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear" data-examples="$settings edit blacklistrole Bots-Banned • $settings edit blacklistrole add Bots-Banned • $settings edit blacklistrole remove Bots-Banned  • $settings edit blacklistrole clear" data-icon="cogs">
+                        <div class="box" data-id="74" data-level="3 - Server Administrator" data-name="blacklistrole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear"
+                            data-examples="$settings edit blacklistrole Bots-Banned • $settings edit blacklistrole add Bots-Banned • $settings edit blacklistrole remove Bots-Banned  • $settings edit blacklistrole clear" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
@@ -2077,7 +2090,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="75" data-level="3 - Server Administrator" data-name="muterole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear" data-examples="$settings edit muterole Muted • $settings edit blacklistrole add Muted • $settings edit blacklistrole remove Muted  • $settings edit blacklistrole clear" data-icon="cogs">
+                        <div class="box" data-id="75" data-level="3 - Server Administrator" data-name="muterole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear"
+                            data-examples="$settings edit muterole Muted • $settings edit blacklistrole add Muted • $settings edit blacklistrole remove Muted  • $settings edit blacklistrole clear" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
 
@@ -2105,7 +2119,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="76" data-level="3 - Server Administrator" data-name="autorole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear" data-examples="$settings edit autorole User • $settings edit autorole add User • $settings edit autorole remove User  • $settings edit autorole clear" data-icon="cogs">
+                        <div class="box" data-id="76" data-level="3 - Server Administrator" data-name="autorole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear"
+                            data-examples="$settings edit autorole User • $settings edit autorole add User • $settings edit autorole remove User  • $settings edit autorole clear" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Automatic Role</h4>
@@ -2132,7 +2147,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="77" data-level="3 - Server Administrator" data-name="autoroledelay" data-type="roles" data-values="disable • [time-in-milliseconds]" data-examples="$settings edit autoroledelay 15000 • $settings edit autoroledelay disable" data-icon="cogs">
+                        <div class="box" data-id="77" data-level="3 - Server Administrator" data-name="autoroledelay" data-type="roles" data-values="disable • [time-in-milliseconds]" data-examples="$settings edit autoroledelay 15000 • $settings edit autoroledelay disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Automatic Role Delay</h4>
@@ -2159,7 +2175,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="78" data-level="3 - Server Administrator" data-name="autorolesilent" data-type="roles" data-values="disable • enable" data-examples="$settings edit autorolesilent enable • $settings edit autorolesilent disable" data-icon="cogs">
+                        <div class="box" data-id="78" data-level="3 - Server Administrator" data-name="autorolesilent" data-type="roles" data-values="disable • enable" data-examples="$settings edit autorolesilent enable • $settings edit autorolesilent disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Automatic Role Silent</h4>
@@ -2186,7 +2203,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="79" data-level="3 - Server Administrator" data-name="subscriberrole" data-type="roles" data-values="disable • [role-name|role-id|role-mention]" data-examples="$settings edit subscriberrole Subscribers • $settings edit subscriberrole disable" data-icon="cogs">
+                        <div class="box" data-id="79" data-level="3 - Server Administrator" data-name="subscriberrole" data-type="roles" data-values="disable • [role-name|role-id|role-mention]" data-examples="$settings edit subscriberrole Subscribers • $settings edit subscriberrole disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Subscriber Role</h4>
@@ -2213,7 +2231,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="80" data-level="3 - Server Administrator" data-name="announcements" data-type="announcements" data-values="disable • here • [channel-name|channel-id|channel-mention]" data-examples="$settings edit announcements here • $settings edit announcements #welcome • $settings edit announcements disable" data-icon="cogs">
+                        <div class="box" data-id="80" data-level="3 - Server Administrator" data-name="announcements" data-type="announcements" data-values="disable • here • [channel-name|channel-id|channel-mention]" data-examples="$settings edit announcements here • $settings edit announcements #welcome • $settings edit announcements disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Announcements Channel</h4>
@@ -2240,7 +2259,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="81" data-level="3 - Server Administrator" data-name="announcements-mention" data-type="announcements" data-values="disable • [role-name|role-id|role-mention]" data-examples="$settings edit announcements-mention Subscribers • $settings edit announcements-mention disable" data-icon="cogs">
+                        <div class="box" data-id="81" data-level="3 - Server Administrator" data-name="announcements-mention" data-type="announcements" data-values="disable • [role-name|role-id|role-mention]" data-examples="$settings edit announcements-mention Subscribers • $settings edit announcements-mention disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Announcements Mention</h4>
@@ -2267,7 +2287,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="82" data-level="3 - Server Administrator" data-name="logs" data-type="logs" data-values="disable • here • [role-name|role-id|role-mention]" data-examples="$settings edit logs here • $settings edit logs #activity • $settings edit logs disable" data-icon="cogs">
+                        <div class="box" data-id="82" data-level="3 - Server Administrator" data-name="logs" data-type="logs" data-values="disable • here • [role-name|role-id|role-mention]" data-examples="$settings edit logs here • $settings edit logs #activity • $settings edit logs disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Logs Channel</h4>
@@ -2294,7 +2315,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="108" data-level="3 - Server Administrator" data-name="logs-join" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-join enable • $settings edit logs-join disable • $settings edit logs-join default • $settings edit logs-join embed • $settings edit logs-join Welcome {user}! I hope you enjoy your stay!" data-icon="cogs">
+                        <div class="box" data-id="108" data-level="3 - Server Administrator" data-name="logs-join" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-join enable • $settings edit logs-join disable • $settings edit logs-join default • $settings edit logs-join embed • $settings edit logs-join Welcome {user}! I hope you enjoy your stay!"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>User Join Logs</h4>
@@ -2321,7 +2343,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="83" data-level="3 - Server Administrator" data-name="logs-leave" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-leave enable • $settings edit logs-leave disable • $settings edit logs-leave default • $settings edit logs-leave embed • $settings edit logs-leave {user} has left the server!" data-icon="cogs">
+                        <div class="box" data-id="83" data-level="3 - Server Administrator" data-name="logs-leave" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-leave enable • $settings edit logs-leave disable • $settings edit logs-leave default • $settings edit logs-leave embed • $settings edit logs-leave {user} has left the server!"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>User Leave Logs</h4>
@@ -2348,7 +2371,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="84" data-level="3 - Server Administrator" data-name="logs-ban" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-ban enable • $settings edit logs-ban disable • $settings edit logs-ban default • $settings edit logs-ban embed • $settings edit logs-ban {user} has been banned!" data-icon="cogs">
+                        <div class="box" data-id="84" data-level="3 - Server Administrator" data-name="logs-ban" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-ban enable • $settings edit logs-ban disable • $settings edit logs-ban default • $settings edit logs-ban embed • $settings edit logs-ban {user} has been banned!"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>User Ban Logs</h4>
@@ -2375,7 +2399,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="85" data-level="3 - Server Administrator" data-name="logs-unban" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-unban enable • $settings edit logs-unban disable • $settings edit logs-unban default • $settings edit logs-unban embed • $settings edit logs-unban {user} has been unbanned!" data-icon="cogs">
+                        <div class="box" data-id="85" data-level="3 - Server Administrator" data-name="logs-unban" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-unban enable • $settings edit logs-unban disable • $settings edit logs-unban default • $settings edit logs-unban embed • $settings edit logs-unban {user} has been unbanned!"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>User Unban Logs</h4>
@@ -2402,7 +2427,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="86" data-level="3 - Server Administrator" data-name="logs-nickname" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-nickname enable • $settings edit logs-nickname disable • $settings edit logs-nickname default • $settings edit logs-nickname embed • $settings edit logs-nickname {user} has changed his nickname ({user.oldnick} => {user.nick})!" data-icon="cogs">
+                        <div class="box" data-id="86" data-level="3 - Server Administrator" data-name="logs-nickname" data-type="logs" data-values="enable • disable • embed • default • [custom-message]" data-examples="$settings edit logs-nickname enable • $settings edit logs-nickname disable • $settings edit logs-nickname default • $settings edit logs-nickname embed • $settings edit logs-nickname {user} has changed his nickname ({user.oldnick} => {user.nick})!"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>User Nickname Logs</h4>
@@ -2429,7 +2455,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="87" data-level="3 - Server Administrator" data-name="logs-invite" data-type="logs" data-values="enable • disable  • default • [custom-message]" data-examples="$settings edit logs-invite enable • $settings edit logs-invite disable • $settings edit logs-invite default • $settings edit logs-invite {user} has sent and invite in {channel.name}" data-icon="cogs">
+                        <div class="box" data-id="87" data-level="3 - Server Administrator" data-name="logs-invite" data-type="logs" data-values="enable • disable  • default • [custom-message]" data-examples="$settings edit logs-invite enable • $settings edit logs-invite disable • $settings edit logs-invite default • $settings edit logs-invite {user} has sent and invite in {channel.name}"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>User Invite Logs</h4>
@@ -2456,7 +2483,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="87" data-level="3 - Server Administrator" data-name="modlogs" data-type="logs" data-values=" disable  • here • [channel-name|channel-id|channel-mention]" data-examples="$settings edit modlogs here • $settings edit modlogs #moderation • $settings edit modlogs disable" data-icon="cogs">
+                        <div class="box" data-id="87" data-level="3 - Server Administrator" data-name="modlogs" data-type="logs" data-values=" disable  • here • [channel-name|channel-id|channel-mention]" data-examples="$settings edit modlogs here • $settings edit modlogs #moderation • $settings edit modlogs disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Moderation Logs</h4>
@@ -2483,7 +2511,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="88" data-level="3 - Server Administrator" data-name="modlogs-purge" data-type="logs" data-values=" disable  • enable " data-examples="$settings edit modlogs-purge enable • $settings edit modlogs-purge disable" data-icon="cogs">
+                        <div class="box" data-id="88" data-level="3 - Server Administrator" data-name="modlogs-purge" data-type="logs" data-values=" disable  • enable " data-examples="$settings edit modlogs-purge enable • $settings edit modlogs-purge disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Moderation Logs: Purge</h4>
@@ -2510,7 +2539,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="89" data-level="3 - Server Administrator" data-name="automessage" data-type="logs" data-values=" disable  • [custom-message] " data-examples="$settings edit automessage disable • $settings edit automessage Hey {user.name}! Please read our rules before typing!" data-icon="cogs">
+                        <div class="box" data-id="89" data-level="3 - Server Administrator" data-name="automessage" data-type="logs" data-values=" disable  • [custom-message] " data-examples="$settings edit automessage disable • $settings edit automessage Hey {user.name}! Please read our rules before typing!"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Automatic Message</h4>
@@ -2537,7 +2567,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="90" data-level="3 - Server Administrator" data-name="autonickname" data-type="logs" data-values=" disable  • [custom-nickname] " data-examples="$settings edit autonickname disable • $settings edit autonickname User" data-icon="cogs">
+                        <div class="box" data-id="90" data-level="3 - Server Administrator" data-name="autonickname" data-type="logs" data-values=" disable  • [custom-nickname] " data-examples="$settings edit autonickname disable • $settings edit autonickname User"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Automatic Nickname</h4>
@@ -2564,7 +2595,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="91" data-level="3 - Server Administrator" data-name="mode" data-type="general" data-values=" free • lite • strict  " data-examples="$settings edit mode free • $settings edit mode lite • $settings edit mode strict" data-icon="cogs">
+                        <div class="box" data-id="91" data-level="3 - Server Administrator" data-name="mode" data-type="general" data-values=" free • lite • strict  " data-examples="$settings edit mode free • $settings edit mode lite • $settings edit mode strict"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Mode</h4>
@@ -2591,7 +2623,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="92" data-level="3 - Server Administrator" data-name="customprefix" data-type="general" data-values="disable • [custom-prefix]" data-examples="$settings edit customprefix ! • $settings edit customprefix disable" data-icon="cogs">
+                        <div class="box" data-id="92" data-level="3 - Server Administrator" data-name="customprefix" data-type="general" data-values="disable • [custom-prefix]" data-examples="$settings edit customprefix ! • $settings edit customprefix disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Custom Prefix</h4>
@@ -2618,7 +2651,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="93" data-level="3 - Server Administrator" data-name="defaultprefix" data-type="general" data-values="disable • enable" data-examples="$settings edit defaultprefix enable • $settings edit defaultprefix disable" data-icon="cogs">
+                        <div class="box" data-id="93" data-level="3 - Server Administrator" data-name="defaultprefix" data-type="general" data-values="disable • enable" data-examples="$settings edit defaultprefix enable • $settings edit defaultprefix disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Default Prefix</h4>
@@ -2645,7 +2679,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="94" data-level="3 - Server Administrator" data-name="antiinvite" data-type="anti-invite" data-values="disable • enable" data-examples="$settings edit antiinvite enable • $settings edit antiinvite disable" data-icon="cogs">
+                        <div class="box" data-id="94" data-level="3 - Server Administrator" data-name="antiinvite" data-type="anti-invite" data-values="disable • enable" data-examples="$settings edit antiinvite enable • $settings edit antiinvite disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Anti-Invite</h4>
@@ -2672,7 +2707,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="95" data-level="3 - Server Administrator" data-name="antiinvite-action" data-type="anti-invite" data-values="disable • enable" data-examples="$settings edit antiinvite-action enable • $settings edit antiinvite-action disable" data-icon="cogs">
+                        <div class="box" data-id="95" data-level="3 - Server Administrator" data-name="antiinvite-action" data-type="anti-invite" data-values="disable • enable" data-examples="$settings edit antiinvite-action enable • $settings edit antiinvite-action disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Anti-Invite Action</h4>
@@ -2699,7 +2735,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="96" data-level="3 - Server Administrator" data-name="antiinvite-warn" data-type="anti-invite" data-values="disable • [1-10]" data-examples="$settings edit antiinvite-warn 2 • $settings edit antiinvite-warn disable" data-icon="cogs">
+                        <div class="box" data-id="96" data-level="3 - Server Administrator" data-name="antiinvite-warn" data-type="anti-invite" data-values="disable • [1-10]" data-examples="$settings edit antiinvite-warn 2 • $settings edit antiinvite-warn disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Anti-Invite: Warn</h4>
@@ -2726,7 +2763,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="97" data-level="3 - Server Administrator" data-name="antiinvite-kick" data-type="anti-invite" data-values="disable • [1-10]" data-examples="$settings edit antiinvite-kick 2 • $settings edit antiinvite-kick disable" data-icon="cogs">
+                        <div class="box" data-id="97" data-level="3 - Server Administrator" data-name="antiinvite-kick" data-type="anti-invite" data-values="disable • [1-10]" data-examples="$settings edit antiinvite-kick 2 • $settings edit antiinvite-kick disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Anti-Invite: Kick</h4>
@@ -2753,7 +2791,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="98" data-level="3 - Server Administrator" data-name="nonickname" data-type="nickname" data-values="disable • enable" data-examples="$settings edit nonickname enable • $settings edit nonickname disable" data-icon="cogs">
+                        <div class="box" data-id="98" data-level="3 - Server Administrator" data-name="nonickname" data-type="nickname" data-values="disable • enable" data-examples="$settings edit nonickname enable • $settings edit nonickname disable"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Disable Nickname Changing</h4>
@@ -2780,7 +2819,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="99" data-level="3 - Server Administrator" data-name="music-permissions" data-type="music" data-values="all • dj • moderator • administrator" data-examples="$settings edit music-permissions all • $settings edit music-permissions dj • $settings edit music-permissions moderator • $settings edit music-permissions administrator" data-icon="cogs">
+                        <div class="box" data-id="99" data-level="3 - Server Administrator" data-name="music-permissions" data-type="music" data-values="all • dj • moderator • administrator" data-examples="$settings edit music-permissions all • $settings edit music-permissions dj • $settings edit music-permissions moderator • $settings edit music-permissions administrator"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Default Permissions</h4>
@@ -2798,7 +2838,7 @@
                             </h5>
                             <div class="highlight left">
                                 <i class="far fa-angle-double-right fa-lg"></i>
-                                <h5> $settings edit music-permissions  <span class="code">&#x3C;administrator&#x3E;</span></h5>
+                                <h5> $settings edit music-permissions <span class="code">&#x3C;administrator&#x3E;</span></h5>
                             </div>
                             <div class="highlight right" onclick="blur()">
                                 <i class="fas fa-info-square fa-lg"></i>
@@ -2807,7 +2847,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="100" data-level="3 - Server Administrator" data-name="music-play" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-play off • $settings edit music-play all • $settings edit music-play dj • $settings edit music-play moderator • $settings edit music-play administrator" data-icon="cogs">
+                        <div class="box" data-id="100" data-level="3 - Server Administrator" data-name="music-play" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-play off • $settings edit music-play all • $settings edit music-play dj • $settings edit music-play moderator • $settings edit music-play administrator"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Play Permissions</h4>
@@ -2834,7 +2875,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="101" data-level="3 - Server Administrator" data-name="music-skip" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-skip off • $settings edit music-skip all • $settings edit music-skip dj • $settings edit music-skip moderator • $settings edit music-skip administrator" data-icon="cogs">
+                        <div class="box" data-id="101" data-level="3 - Server Administrator" data-name="music-skip" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-skip off • $settings edit music-skip all • $settings edit music-skip dj • $settings edit music-skip moderator • $settings edit music-skip administrator"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Skip Permissions</h4>
@@ -2861,7 +2903,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="102" data-level="3 - Server Administrator" data-name="music-pause" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-pause off • $settings edit music-pause all • $settings edit music-pause dj • $settings edit music-pause moderator • $settings edit music-pause administrator" data-icon="cogs">
+                        <div class="box" data-id="102" data-level="3 - Server Administrator" data-name="music-pause" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-pause off • $settings edit music-pause all • $settings edit music-pause dj • $settings edit music-pause moderator • $settings edit music-pause administrator"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Pause Permissions</h4>
@@ -2888,7 +2931,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="103" data-level="3 - Server Administrator" data-name="music-resume" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-resume off • $settings edit music-resume all • $settings edit music-resume dj • $settings edit music-resume moderator • $settings edit music-resume administrator" data-icon="cogs">
+                        <div class="box" data-id="103" data-level="3 - Server Administrator" data-name="music-resume" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-resume off • $settings edit music-resume all • $settings edit music-resume dj • $settings edit music-resume moderator • $settings edit music-resume administrator"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Resume Permissions</h4>
@@ -2915,7 +2959,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="104" data-level="3 - Server Administrator" data-name="music-unqueue" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-unqueue off • $settings edit music-unqueue all • $settings edit music-unqueue dj • $settings edit music-unqueue moderator • $settings edit music-unqueue administrator" data-icon="cogs">
+                        <div class="box" data-id="104" data-level="3 - Server Administrator" data-name="music-unqueue" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-unqueue off • $settings edit music-unqueue all • $settings edit music-unqueue dj • $settings edit music-unqueue moderator • $settings edit music-unqueue administrator"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Unqueue Permissions</h4>
@@ -2942,7 +2987,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="105" data-level="3 - Server Administrator" data-name="music-volume" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-volume off • $settings edit music-volume all • $settings edit music-volume dj • $settings edit music-volume moderator • $settings edit music-volume administrator" data-icon="cogs">
+                        <div class="box" data-id="105" data-level="3 - Server Administrator" data-name="music-volume" data-type="music" data-values="off • all • dj • moderator • administrator" data-examples="$settings edit music-volume off • $settings edit music-volume all • $settings edit music-volume dj • $settings edit music-volume moderator • $settings edit music-volume administrator"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Volume Permissions</h4>
@@ -2969,7 +3015,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="106" data-level="3 - Server Administrator" data-name="music-timelimit" data-type="music" data-values="default • 120-600 • 120 - 7200 !prime!" data-examples="$settings edit music-timelimit default • $settings edit music-timelimit 320" data-icon="cogs">
+                        <div class="box" data-id="106" data-level="3 - Server Administrator" data-name="music-timelimit" data-type="music" data-values="default • 120-600 • 120 - 7200 !prime!" data-examples="$settings edit music-timelimit default • $settings edit music-timelimit 320"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Time Limit</h4>
@@ -2996,7 +3043,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="107" data-level="3 - Server Administrator" data-name="music-queuelimit" data-type="music" data-values="default • 1- 10 • 1 - 100 !prime!" data-examples="$settings edit music-queuelimit default • $settings edit music-queuelimit 5" data-icon="cogs">
+                        <div class="box" data-id="107" data-level="3 - Server Administrator" data-name="music-queuelimit" data-type="music" data-values="default • 1- 10 • 1 - 100 !prime!" data-examples="$settings edit music-queuelimit default • $settings edit music-queuelimit 5"
+                            data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Music Queue Limit</h4>
@@ -3034,16 +3082,51 @@
             var ready = true
             var current = "qs"
             $(() => {
+
+                document.getElementById("searchBar").value = ""
+                document.getElementById("searchBar").addEventListener("input", function(e) {
+                    $(".searchResult").off( "click" )
+                    var allData = Array.from(document.querySelectorAll("[data-id]")).slice(4)
+                    var targets = {}
+                    allData.forEach(i => {
+                        targets[i.children[0].children[1].innerHTML] = i
+                    })
+                    var allStrings = allData.map(i => {
+                        return i.children[0].children[1].innerHTML
+                    })
+                    var results = findBestMatch(this.value, allStrings)
+                    var filteredResults = results.ratings.sort((a, b) => {
+                        if (a.rating < b.rating) return 1;
+                        if (a.rating > b.rating) return -1;
+                        return 0;
+                    }).filter(i => {
+                        return i.rating > 0.15
+                    })
+                    var text = "<h4 class=\"title\">Results for: <b>"+document.getElementById("searchBar").value+"</b></h4>\n<br><br>"
+                    if (filteredResults.length == 0) {
+                        text = text + "<h5>Sorry, we can't find anything for <b>" + document.getElementById("searchBar").value + "</b>"
+                    } else {
+                        filteredResults.forEach(i => {
+                            text = text + "<div class=\"searchResultContainer\">"+targets[i.target].children[0].children[0].outerHTML+"<h3 class=\"searchResult\" data-search-id=\"" + targets[i.target].dataset.id + "\">" + i.target + "</h3></div>" + "\n"
+                        })
+                    }
+                    document.getElementById("search_tab").innerHTML = text
+                    $(".searchResult").click(function(e){
+                        blur(e.target.dataset.searchId)
+                    })
+                    $(`#search_tab`).show()
+                    change("search")
+                })
                 if (window.location.hash) {
-                    if ($(`${window.location.hash}_toggle`).length > 0){
+                    if ($(`${window.location.hash}_toggle`).length > 0) {
                         $(`${window.location.hash}_toggle`).addClass("selected")
                         $(`${window.location.hash}_tab`).show()
                         current = window.location.hash.replace("#", "")
-                    }else {
+                    } else {
                         $("#qs_toggle").addClass("selected")
                         $("#qs_tab").show()
                     }
-                }else{
+                } else {
                     $("#qs_toggle").addClass("selected")
                     $("#qs_tab").show()
                 }
@@ -3084,12 +3167,12 @@
                     }
 
                 })
-                $(".doc-filter-button").click(function(){
+                $(".doc-filter-button").click(function() {
                     var e = $(this)
-                    if(e.hasClass("filtered")){
+                    if (e.hasClass("filtered")) {
                         e.removeClass("filtered")
                         $(`[data-type="${e.attr("data-name")}"]`).parent().removeClass("filtered")
-                    }else{
+                    } else {
                         e.addClass("filtered")
                         $(`[data-type="${e.attr("data-name")}"]`).parent().addClass("filtered")
                     }
@@ -3099,6 +3182,10 @@
             function change(id) {
                 if (!ready) {
                     return
+                }
+                if (id != "search") {
+                    $("#search_tab").hide()
+                    document.getElementById("searchBar").value = ""
                 }
                 $(".selected").removeClass("selected")
                 $("#" + id + "_toggle").addClass("selected")
@@ -3127,11 +3214,6 @@
                     examples = examples.split("•")
                     examples = examples.map(clean)
 
-                    console.log(level)
-                    console.log(values)
-                    console.log(examples)
-                    console.log(description)
-                    console.log(title)
                     if (icon == "cogs") {
                         $("#cmdname").text("Setting Name")
                         $("#values-title").text("Values")
@@ -3183,7 +3265,6 @@
 
 
             }
-
         </script>
     </div>
     <div class="blurred" onclick="disableBlur()"></div>
