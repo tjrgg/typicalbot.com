@@ -369,15 +369,16 @@ nav {
     color: #007bff;
     cursor: pointer;
 }
+
 .searchResultContainer {
     display: flex;
     margin-bottom: 20px;
 }
+
 .searchResultContainer .circle.blue.small {
     margin-top: 0px;
     margin-right: 20px;
 }
-
 
 /* Media queries */
 @media (max-width: 767px) {
@@ -387,6 +388,10 @@ nav {
 
     .searchBar {
         padding-right: 20px;
+    }
+
+    .searchBar i {
+        display: none;
     }
 
     .small-only {
@@ -591,9 +596,11 @@ nav {
     .tab-pane .row {
         margin-bottom: 0;
     }
+
     .searchBar {
         padding-right: 20px;
     }
+
     #filters {
         display: flex !important;
         overflow-y: hidden;
