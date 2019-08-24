@@ -2119,8 +2119,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="76" data-level="3 - Server Administrator" data-name="autorole" data-type="roles" data-values="disable • [role-name | role-mention | role-id] • add [role-name | role-mention | role-id] • remove [role-name | role-mention | role-id] • clear"
-                            data-examples="$settings edit autorole User • $settings edit autorole add User • $settings edit autorole remove User  • $settings edit autorole clear" data-icon="cogs">
+                        <div class="box" data-id="76" data-level="3 - Server Administrator" data-name="autorole" data-type="roles" data-values="disable • [role-name | role-mention | role-id]"
+                            data-examples="$settings edit autorole User • $settings edit autorole disable" data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
                                 <h4>Automatic Role</h4>
@@ -2146,8 +2146,37 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="77" data-level="3 - Server Administrator" data-name="autoroledelay" data-type="roles" data-values="disable • [time-in-milliseconds]" data-examples="$settings edit autoroledelay 15000 • $settings edit autoroledelay disable"
+                        <div class="box" data-id="76" data-level="3 - Server Administrator" data-name="autorole-bots" data-type="roles" data-values="disable • [role-name | role-mention | role-id]"
+                            data-examples="$settings edit autorole-bots Bot • $settings edit autorole-bots disable" data-icon="cogs">
+                            <div style="display: flex">
+                                <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
+                                <h4>Automatic Role for Bots</h4>
+                                <i class="fas fa-info-circle fa-lg small-only"></i>
+                                <div class="type-description large-only">
+                                    <div class="tiny-circle">
+                                        <i class="fas fa-scroll"></i>
+                                    </div>
+                                    <h5>Roles</h5>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <h5>
+                                A role that the bot will give another bot upon joining the server.
+                            </h5>
+                            <div class="highlight left">
+                                <i class="far fa-angle-double-right fa-lg"></i>
+                                <h5> $settings edit autorole-bots <span class="code">&#x3C;role-name&#x3E;</span></h5>
+                            </div>
+                            <div class="highlight right" onclick="blur()">
+                                <i class="fas fa-info-square fa-lg"></i>
+                                <h5 class="large-only">More info</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="box" data-id="77" data-level="3 - Server Administrator" data-name="autorole-delay" data-type="roles" data-values="disable • [time-in-milliseconds]" data-examples="$settings edit autorole-delay 15000 • $settings edit autorole-delay disable"
                             data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
@@ -2166,7 +2195,7 @@
                             </h5>
                             <div class="highlight left">
                                 <i class="far fa-angle-double-right fa-lg"></i>
-                                <h5> $settings edit autoroledelay <span class="code">&#x3C;time-in-milliseconds&#x3E;</span></h5>
+                                <h5> $settings edit autorole-delay <span class="code">&#x3C;time-in-milliseconds&#x3E;</span></h5>
                             </div>
                             <div class="highlight right" onclick="blur()">
                                 <i class="fas fa-info-square fa-lg"></i>
@@ -2175,7 +2204,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="box" data-id="78" data-level="3 - Server Administrator" data-name="autorolesilent" data-type="roles" data-values="disable • enable" data-examples="$settings edit autorolesilent enable • $settings edit autorolesilent disable"
+                        <div class="box" data-id="78" data-level="3 - Server Administrator" data-name="autorole-silent" data-type="roles" data-values="disable • enable" data-examples="$settings edit autorole-silent enable • $settings edit autorole-silent disable"
                             data-icon="cogs">
                             <div style="display: flex">
                                 <div class="circle blue small"><i class="fas fa-cogs fa-2x"></i></div>
@@ -2194,7 +2223,7 @@
                             </h5>
                             <div class="highlight left">
                                 <i class="far fa-angle-double-right fa-lg"></i>
-                                <h5> $settings edit autorolesilent <span class="code">&#x3C;enable|disable&#x3E;</span></h5>
+                                <h5> $settings edit autorole-silent <span class="code">&#x3C;enable|disable&#x3E;</span></h5>
                             </div>
                             <div class="highlight right" onclick="blur()">
                                 <i class="fas fa-info-square fa-lg"></i>
