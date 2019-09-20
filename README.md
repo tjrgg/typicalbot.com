@@ -17,9 +17,6 @@ TypicalBot is a multi-threaded and high-performance Discord bot, using the [JDA 
 - [Maintainers](#maintainers)
 - [License](#license)
 
-## Project Roadmap
-
-Our project roadmap can be found [here](https://typicalbot.com/roadmap). 
 
 ## Maintainers
 
