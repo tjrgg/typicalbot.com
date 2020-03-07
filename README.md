@@ -22,6 +22,6 @@ TypicalBot is an ironically named multipurpose Discord bot that is far from typi
 
 ## License
 
-The TypicalBot website is licensed under the [MIT license](./LICENSE.md).
+The TypicalBot website is licensed under the [MIT license](LICENSE).
 
 Any questions, please email opensource@sylke.co
