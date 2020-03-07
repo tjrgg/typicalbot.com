@@ -1,19 +1,17 @@
-<h1 align="center">TypicalBot</h1>
 <p align="center">
-	<a href="https://typicalbot.com"><img src="https://img.shields.io/badge/website-typicalbot.com-brightgreen.svg"></a>
-	<a href="https://discord.gg/typicalbot"><img src="https://discordapp.com/api/guilds/163038706117115906/embed.png?style=shield"></a>
-	<a href="https://www.patreon.com/TypicalBot"><img src="https://img.shields.io/badge/donate-typicalbot-blue.svg"></a>
-	<a href="LICENSE.md"><img src="https://img.shields.io/github/license/typicalbot/typicalbot.com.svg"></a>
+    <h1 align="center">TypicalBot</h1>
+</p>
+<p align="center">
+    <i>A stable, lightning fast, easy to use, <a href="https://discordapp.com">Discord</a> bot built using <a href="https://discord.js.org">Discord.js</a> and <a href="https://nodejs.org">Node.js</a>.<br>Try out TypicalBot using our hosted version at <a href="https://typicalbot.com/invite">typicalbot.com/invite</a>.</i>
+</p>
+<p align="center">
+    <a href="https://discord.gg/typicalbot"><img src="https://discordapp.com/api/guilds/163038706117115906/embed.png?style=shield" alt="Discord"></a>
 </p>
 
-
-TypicalBot is a multi-threaded and high-performance Discord bot, using the [JDA library](https://github.com/DV8FromTheWorld/JDA).
-
-[![Join TypicalBot Lounge](https://discordapp.com/api/guilds/163038706117115906/embed.png?style=banner2)](https://discord.gg/typicalbot)
+TypicalBot is an ironically named multipurpose Discord bot that is far from typical, developed in [discord.js](https://github.com/discordjs/discord.js).
 
 ## Table of Contents
 
-- [Project Roadmap](#project-roadmap)
 - [Maintainers](#maintainers)
 - [License](#license)
 
@@ -21,14 +19,9 @@ TypicalBot is a multi-threaded and high-performance Discord bot, using the [JDA 
 ## Maintainers
 
 - [@nsylke](https://nsylke.me)
-- [@hypercoder](https://hypercoder.me)
 
 ## License
 
 The TypicalBot website is licensed under the [MIT license](./LICENSE.md).
 
-As many other open source projects, we require that contributors provide us with a Contributor License Agreement (CLA). By submitting code to the TypicalBot project, you are granting us a right to use that code under the terms of the CLA.
-
-Our version of the CLA was adapted from the Microsoft Contributor License Agreement, which they generously made available to the public domain under Creative Commons CC0 1.0 Universal.
-
-Any questions, please email support@typicalbot.com
+Any questions, please email opensource@sylke.co
